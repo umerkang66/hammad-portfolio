@@ -1,0 +1,41 @@
+.btn {
+  // for <button>
+  &,
+  // for <a>
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    // we should always add this, if we add height, margin or padding
+    display: inline-block;
+    border-radius: 5rem;
+    font-size: var(--default-font-size);
+    position: relative;
+
+    // change for the <button> element
+    border: none;
+    cursor: pointer;
+
+    transition: transform 0.2s ease-out;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    // x-axis, y-axis, blur, color
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    // always related to the initial link state
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+  }
+
+  &--blue {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+  }
+}

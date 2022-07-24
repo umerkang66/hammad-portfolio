@@ -1,7 +1,16 @@
-import type { NextPage } from 'next';
+import Head from 'next/head';
+// Components
+import Header from '../components/home-page/header/Header';
 
-const Home: NextPage = () => {
-  return <div>Home Page</div>;
+const Home = () => {
+  return (
+    <div>
+      <Head>
+        <title>Hammad Portfolio</title>
+      </Head>
+      <Header />
+    </div>
+  );
 };
 
 export default Home;

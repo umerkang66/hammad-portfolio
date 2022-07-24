@@ -1,0 +1,15 @@
+.header {
+  height: 60rem;
+  color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+}
+
+.header__content {
+  width: 70%;
+}
+
+.header__paragraph {
+  width: 90%;
+}
