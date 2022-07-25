@@ -14,7 +14,7 @@ const projects: Project[] = [
   {
     name: 'project 1',
     description:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     image: 'project-1.jpg',
     slug: 'project-1',
   },
@@ -22,7 +22,7 @@ const projects: Project[] = [
   {
     name: 'project 2',
     description:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      'This is the description of the second dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     image: 'project-2.jpg',
     slug: 'project-2',
   },
@@ -30,7 +30,7 @@ const projects: Project[] = [
   {
     name: 'project 3',
     description:
-      'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+      'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     image: 'project-3.jpg',
     slug: 'project-3',
   },
