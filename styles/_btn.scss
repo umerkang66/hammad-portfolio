@@ -1,24 +1,19 @@
 .btn {
   // for <button>
-  &,
-  // for <a>
-  &:link,
-  &:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 4rem;
-    // we should always add this, if we add height, margin or padding
-    display: inline-block;
-    border-radius: 5rem;
-    font-size: var(--default-font-size);
-    position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3rem;
+  // we should always add this, if we add height, margin or padding
+  display: inline-block;
+  border-radius: 0.2rem;
+  font-size: var(--default-font-size);
+  position: relative;
 
-    // change for the <button> element
-    border: none;
-    cursor: pointer;
+  // change for the <button> element
+  border: none;
+  cursor: pointer;
 
-    transition: transform 0.2s ease-out;
-  }
+  transition: transform 0.2s ease-out;
 
   &:hover {
     transform: translateY(-3px);
@@ -37,5 +32,24 @@
   &--blue {
     background-color: var(--color-primary);
     color: var(--color-background);
+    margin-right: 2rem;
+    // this button looks a little bit small
+    // so add the same border that the next one has
+    border: 2px solid var(--color-primary);
+  }
+
+  &--white {
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+  }
+
+  &__arrow {
+    display: inline-block;
+    transition: all 0.3s;
+  }
+
+  &:hover &__arrow {
+    transform: translateX(0.5rem);
   }
 }

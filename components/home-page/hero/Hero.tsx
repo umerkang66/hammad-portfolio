@@ -1,18 +1,18 @@
 import Link from 'next/link';
-import styles from './header.module.scss';
+import styles from './hero.module.scss';
 
-const Header = () => {
+const Hero = () => {
   return (
-    <section className={styles.header}>
+    <section className={styles.hero}>
       <div className="container">
-        <div className={styles.header__content}>
+        <div className={styles.hero__content}>
           <h1 className="heading-primary u-margin-bottom-small">
             Hi, I am Hammad Kakli, an amazon enthusiast.
           </h1>
 
           <p
             className={
-              styles.header__paragraph + ' paragraph' + ' u-margin-bottom-small'
+              styles.hero__paragraph + ' paragraph' + ' u-margin-bottom-small'
             }
           >
             Experienced Professional Freelancer with a demonstrated history of
@@ -21,7 +21,7 @@ const Header = () => {
 
           <p
             className={
-              styles.header__paragraph +
+              styles.hero__paragraph +
               ' ' +
               'paragraph' +
               ' u-margin-bottom-medium'
@@ -32,13 +32,22 @@ const Header = () => {
             evangelist and biker. And I probably forgot a few.
           </p>
 
-          <Link href="#">
-            <a className="btn btn--blue">More Info</a>
-          </Link>
+          <div className={styles.hero__buttons}>
+            <Link href="#">
+              <a className="btn btn--blue">
+                More Info <span className="btn__arrow">&rarr;</span>
+              </a>
+            </Link>
+            <Link href="#">
+              <a className="btn btn--white">
+                Contact Me <span className="btn__arrow">&rarr;</span>
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default Header;
+export default Hero;

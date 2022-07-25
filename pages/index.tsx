@@ -1,14 +1,14 @@
 import Head from 'next/head';
 // Components
-import Header from '../components/home-page/header/Header';
+import Hero from '../components/home-page/hero/Hero';
 
 const Home = () => {
   return (
     <div>
       <Head>
-        <title>Hammad Portfolio</title>
+        <title>Portfolio | Hammad</title>
       </Head>
-      <Header />
+      <Hero />
     </div>
   );
 };
