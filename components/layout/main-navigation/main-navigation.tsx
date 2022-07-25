@@ -29,7 +29,7 @@ const MainNavigation: FC = (): ReactElement => {
           <nav>
             <ul className={styles.header__nav_list}>
               {navLinks.map(link => (
-                <NavLink {...link} />
+                <NavLink key={link.href} {...link} />
               ))}
             </ul>
           </nav>
