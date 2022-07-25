@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactElement, ReactNode } from 'react';
+import { FC, Fragment, ReactElement, ReactNode, useEffect } from 'react';
 import MainNavigation from './main-navigation/main-navigation';
 
 interface LayoutProps {
@@ -6,10 +6,10 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = (props): ReactElement => {
+  // props.children is every page component that will be render through this
   return (
     <Fragment>
       <MainNavigation />
-      {/* props.children is every page component that will be render through this*/}
       <main>{props.children}</main>
     </Fragment>
   );
