@@ -9,6 +9,7 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
     <div className={styles.card}>
       <div className={styles.card__image_container}>
         <Image
+          alt={props.name}
           className={styles.card__image}
           src={`/images/projects/${props.image}`}
           width={400}

@@ -12,6 +12,10 @@
 
   &--white {
     color: var(--color-background);
+    &__underline {
+      display: inline-block;
+      border-bottom: 2px solid var(--color-background);
+    }
   }
 }
 

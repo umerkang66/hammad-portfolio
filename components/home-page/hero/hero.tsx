@@ -50,6 +50,7 @@ const Hero = () => {
 
           <div className={styles.hero__content_right}>
             <Image
+              alt="hammad kakli"
               className={styles.hero__image}
               src="/images/hammad.png"
               height={373}
