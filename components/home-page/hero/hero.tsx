@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './hero.module.scss';
+import Image from 'next/image';
 
 const Hero = () => {
   return (
@@ -48,11 +49,11 @@ const Hero = () => {
           </div>
 
           <div className={styles.hero__content_right}>
-            <img
+            <Image
               className={styles.hero__image}
               src="/images/hammad.png"
-              height={600}
-              width={900}
+              height={373}
+              width={392}
             />
           </div>
         </div>
