@@ -46,10 +46,11 @@
 
   &__arrow {
     display: inline-block;
+    transform: translateY(-1px);
     transition: all 0.3s;
   }
 
   &:hover &__arrow {
-    transform: translateX(0.5rem);
+    transform: translateY(-1px) translateX(0.5rem);
   }
 }
