@@ -7,6 +7,14 @@
   margin-bottom: 2rem;
 }
 
+.heading-secondary {
+  font-size: 3rem;
+
+  &--white {
+    color: var(--color-background);
+  }
+}
+
 .paragraph {
   font-size: var(--default-font-size);
   color: var(--color-grey-dark);
