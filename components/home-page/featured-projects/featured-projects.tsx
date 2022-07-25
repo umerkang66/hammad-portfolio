@@ -54,7 +54,7 @@ const FeaturedProjects: FC = (): ReactElement => {
 
         <div className={styles.featured_projects__link_container}>
           <Link href="/projects">
-            <a className="btn btn--secondary">
+            <a className="btn btn--secondary btn--secondary__featured_projects">
               All Projects <span className="btn__arrow">&rarr;</span>
             </a>
           </Link>

@@ -41,6 +41,12 @@
     background-color: var(--color-background);
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
+
+    &__featured_projects {
+      border: 2px solid var(--color-primary-light);
+      background-color: var(--color-primary);
+      color: var(--color-background);
+    }
   }
 
   &--tertiary {
