@@ -7,7 +7,6 @@
   display: inline-block;
   border-radius: 0.2rem;
   font-size: var(--default-font-size);
-  position: relative;
 
   // change for the <button> element
   border: none;
@@ -29,7 +28,7 @@
     box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
   }
 
-  &--blue {
+  &--primary {
     background-color: var(--color-primary);
     color: var(--color-background);
     margin-right: 2rem;
@@ -38,10 +37,16 @@
     border: 2px solid var(--color-primary);
   }
 
-  &--white {
+  &--secondary {
     background-color: var(--color-background);
     color: var(--color-primary);
     border: 2px solid var(--color-primary);
+  }
+
+  &--tertiary {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    padding: 0.7rem 1.5rem;
   }
 
   &__arrow {

@@ -15,7 +15,7 @@ const NotFoundPage: FC = (): ReactElement => {
           404 | Page not found
         </p>
         <Link href="/">
-          <a className="btn btn--blue u-center-text">Home Page</a>
+          <a className="btn btn--primary u-center-text">Home Page</a>
         </Link>
       </div>
     </div>

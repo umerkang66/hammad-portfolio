@@ -35,13 +35,13 @@ const Hero = () => {
             </p>
 
             <div className={styles.hero__buttons}>
-              <Link href="#">
-                <a className="btn btn--blue">
+              <Link href="/about">
+                <a className="btn btn--primary">
                   More Info <span className="btn__arrow">&rarr;</span>
                 </a>
               </Link>
-              <Link href="#">
-                <a className="btn btn--white">
+              <Link href="/contact">
+                <a className="btn btn--secondary">
                   Contact Me <span className="btn__arrow">&rarr;</span>
                 </a>
               </Link>

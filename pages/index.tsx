@@ -1,7 +1,7 @@
 import Head from 'next/head';
 // Components
 import Hero from '../components/home-page/hero/hero';
-import Projects from '../components/home-page/featured-projects/projects';
+import FeaturedProjects from '../components/home-page/featured-projects/featured-projects';
 
 const Home = () => {
   return (
@@ -10,7 +10,7 @@ const Home = () => {
         <title>Portfolio | Hammad</title>
       </Head>
       <Hero />
-      <Projects />
+      <FeaturedProjects />
     </div>
   );
 };

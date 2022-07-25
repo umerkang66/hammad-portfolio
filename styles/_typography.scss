@@ -15,7 +15,21 @@
   }
 }
 
+.heading-tertiary {
+  font-size: 2rem;
+  text-transform: uppercase;
+
+  &--green {
+    color: var(--color-primary);
+  }
+}
+
 .paragraph {
   font-size: var(--default-font-size);
   color: var(--color-grey-dark);
+
+  &--card {
+    font-size: 1.4rem;
+    font-style: italic;
+  }
 }
