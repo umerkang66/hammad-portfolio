@@ -9,6 +9,11 @@
     align-items: center;
   }
 
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+
   &__nav_list {
     display: flex;
   }

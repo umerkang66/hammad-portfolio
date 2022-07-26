@@ -2,11 +2,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
 import styles from './project-card.module.scss';
-import type { Project as ProjectCardProps } from '../../home-page/featured-projects/featured-projects';
+import type { Project } from '../../../common-types/project';
+
+interface ProjectCardProps extends Project {
+  background: 'light' | 'dark';
+}
 
 const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
   return (
-    <div className={styles.card}>
+    <div
+      className={`${styles.card} ${
+        props.background === 'dark' ? styles.card__dark : styles.card__light
+      }`}
+    >
       <div className={styles.card__image_container}>
         <Image
           alt={props.name}
@@ -22,7 +30,13 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
           {props.name}
         </h3>
 
-        <p className="paragraph paragraph--card u-margin-bottom-small">
+        <p
+          className={`paragraph paragraph--card ${
+            props.background === 'dark'
+              ? 'paragraph--card__light'
+              : 'paragraph--card__dark'
+          } u-margin-bottom-small`}
+        >
           {props.description}
         </p>
 

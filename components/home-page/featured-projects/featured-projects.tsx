@@ -1,14 +1,8 @@
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
-import ProjectCard from '../../common/project-card/project-card';
 import styles from './featured-projects.module.scss';
-
-export interface Project {
-  name: string;
-  description: string;
-  image: string;
-  slug: string;
-}
+import { Project } from '../../../common-types/project';
+import ProjectsGrid from '../../common/project-grid/projects-grid';
 
 const projects: Project[] = [
   {
@@ -43,14 +37,8 @@ const FeaturedProjects: FC = (): ReactElement => {
         <h2 className="heading-secondary heading-secondary--white heading-secondary--white__underline u-margin-bottom-medium">
           Featured Projects
         </h2>
-
-        <div
-          className={styles.featured_projects__grid + ' u-margin-bottom-medium'}
-        >
-          {projects.map(project => {
-            return <ProjectCard key={project.slug} {...project} />;
-          })}
-        </div>
+        <ProjectsGrid projects={projects} background="dark" />
+        <div className="u-margin-bottom-medium" />
 
         <div className={styles.featured_projects__link_container}>
           <Link href="/projects">

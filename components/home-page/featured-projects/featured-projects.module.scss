@@ -3,12 +3,6 @@
   background-color: var(--color-primary);
   transform: scaleY(1.04);
 
-  &__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
-    grid-gap: 3rem;
-  }
-
   &__link_container {
     width: 100%;
     display: flex;

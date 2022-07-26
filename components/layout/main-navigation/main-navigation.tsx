@@ -1,4 +1,5 @@
 import { FC, ReactElement } from 'react';
+import SocialMediaIcons from '../../common/social-media-icons/social-media-icons';
 import Logo from '../logo/logo';
 import styles from './main-navigation.module.scss';
 import NavLink from './nav-link';
@@ -20,12 +21,13 @@ const MainNavigation: FC = (): ReactElement => {
       <div className="container">
         <div className={styles.header__content}>
           <Logo type="primary" />
-          <nav>
-            <ul className={styles.header__nav_list}>
+          <nav className={styles.header__navigation}>
+            <ul className={styles.header__nav_list + ' u-margin-right-medium'}>
               {navLinks.map(link => (
                 <NavLink key={link.href} {...link} />
               ))}
             </ul>
+            <SocialMediaIcons fillColor="light" />
           </nav>
         </div>
       </div>

@@ -1,45 +1,16 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import styles from './about.module.scss';
+import { Fragment } from 'react';
+import AboutComponent from '../components/about-page/about';
 
 const About: NextPage = () => {
   return (
-    <div className={styles.about}>
+    <Fragment>
       <Head>
         <title>About me | Hammad</title>
       </Head>
-
-      <div className="container-small">
-        <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
-          More About me
-        </h2>
-
-        <p className="paragraph paragraph--clear u-margin-bottom-small">
-          Experienced Professional Freelancer with a demonstrated history of
-          working in the E-Commerce/internet industry.
-        </p>
-
-        <p className="paragraph paragraph--clear u-margin-bottom-small">
-          I am an Analyst, programmer, troublemaker, executive, revisionist,
-          sales guy, data analyst, system administrator, product owner,
-          evangelist and biker. And I probably forgot a few.
-        </p>
-
-        <p className="paragraph paragraph--clear u-margin-bottom-small">
-          I am interested to scale the business as well as technology. I am
-          proud to be involved in the Amazon business to enable young businesses
-          around the globe.
-        </p>
-
-        <p className="paragraph paragraph--clear u-margin-bottom-small">
-          I am enjoying to enable Pakistan in the field of eCommerce. Skilled in
-          Amazon MWS, Amazon PPC, Amazon Listing, All Bulk Operations, Customer
-          Support, A+ Content, Amazon Private Label, Wholesale FBA and
-          Drop-shipping, with a Bachelor of Science (BS) focused in Computer
-          Science from University of Central Punjab.
-        </p>
-      </div>
-    </div>
+      <AboutComponent />
+    </Fragment>
   );
 };
 
