@@ -12,7 +12,7 @@ const Notification: FC<NotificationProps> = ({
   type,
   showNotification,
 }): ReactElement => {
-  const emoji = type === 'success' ? '🚀🚀🚀' : '';
+  const emoji = type === 'success' ? '🚀' : '';
 
   return (
     <div
