@@ -4,7 +4,7 @@ import Layout from '../components/layout/layout';
 import { Fragment } from 'react';
 import NextNProgress from 'nextjs-progressbar';
 
-function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Fragment>
       <NextNProgress height={5} color="#969799" />
@@ -13,6 +13,6 @@ function App({ Component, pageProps }: AppProps) {
       </Layout>
     </Fragment>
   );
-}
+};
 
 export default App;

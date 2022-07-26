@@ -1,5 +1,6 @@
-import { FC, Fragment, ReactElement, ReactNode, useEffect } from 'react';
+import { FC, Fragment, ReactElement, ReactNode } from 'react';
 import MainNavigation from './main-navigation/main-navigation';
+import Footer from './footer/footer';
 
 interface LayoutProps {
   children?: ReactNode;
@@ -11,6 +12,7 @@ const Layout: FC<LayoutProps> = (props): ReactElement => {
     <Fragment>
       <MainNavigation />
       <main>{props.children}</main>
+      <Footer />
     </Fragment>
   );
 };

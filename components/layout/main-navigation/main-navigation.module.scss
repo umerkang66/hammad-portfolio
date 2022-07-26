@@ -9,16 +9,6 @@
     align-items: center;
   }
 
-  &__logo {
-    display: inline-block;
-    font-weight: 600;
-    font-size: 2rem;
-    text-decoration: none;
-    color: var(--color-white);
-    border-bottom: 2px solid var(--color-white);
-    text-transform: uppercase;
-  }
-
   &__nav_list {
     display: flex;
   }

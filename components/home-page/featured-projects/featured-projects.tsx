@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
-import ProjectCard from '../../common/project-card';
+import ProjectCard from '../../common/project-card/project-card';
 import styles from './featured-projects.module.scss';
 
 export interface Project {

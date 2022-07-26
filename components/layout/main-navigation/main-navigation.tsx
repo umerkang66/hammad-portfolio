@@ -1,6 +1,5 @@
-import Link from 'next/link';
 import { FC, ReactElement } from 'react';
-import Logo from '../logo';
+import Logo from '../logo/logo';
 import styles from './main-navigation.module.scss';
 import NavLink from './nav-link';
 
@@ -20,12 +19,7 @@ const MainNavigation: FC = (): ReactElement => {
     <header className={styles.header}>
       <div className="container">
         <div className={styles.header__content}>
-          <Link href="/">
-            <a className={styles.header__logo}>
-              <Logo />
-            </a>
-          </Link>
-
+          <Logo type="primary" />
           <nav>
             <ul className={styles.header__nav_list}>
               {navLinks.map(link => (
