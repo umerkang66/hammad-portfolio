@@ -34,6 +34,7 @@ const Footer: FC = (): ReactElement => {
                   <li key={i} className={styles.footer__icon_list_item}>
                     <a
                       target="_blank"
+                      rel="noreferrer"
                       href={href}
                       className={styles.footer__icon_link}
                     >
