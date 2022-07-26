@@ -26,7 +26,7 @@ const Footer: FC = (): ReactElement => {
           </div>
           <div className={styles.footer__right}>
             <h3 className="heading-tertiary u-margin-bottom-small">
-              Social Media Icons
+              Social Media Links
             </h3>
             <ul className={styles.footer__icons + ' u-margin-bottom-medium'}>
               {icons.map(({ type, href }, i) => {

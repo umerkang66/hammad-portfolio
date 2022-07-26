@@ -17,8 +17,8 @@ const Hero = () => {
                 styles.hero__paragraph + ' paragraph' + ' u-margin-bottom-small'
               }
             >
-              Experienced Professional Freelancer with a demonstrated history of
-              working in the E-Commerce/internet industry.
+              Amazon Account Manager || PPC Expert || PL Wholesale Dropshipping
+              Expert || Amazon Evangelist Consultant and Trainer.
             </p>
 
             <p
@@ -29,9 +29,8 @@ const Hero = () => {
                 ' u-margin-bottom-medium'
               }
             >
-              I am an Analyst, programmer, troublemaker, executive, revisionist,
-              sales guy, data analyst, system administrator, product owner,
-              evangelist and biker. And I probably forgot a few.
+              Experienced Professional Freelancer with a demonstrated history of
+              working in the E-Commerce/internet industry.
             </p>
 
             <div className={styles.hero__buttons}>

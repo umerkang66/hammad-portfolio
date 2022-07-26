@@ -24,5 +24,12 @@ body {
 
 .container {
   max-width: 100rem;
+  padding: 0 2rem;
+  margin: auto;
+}
+
+.container-small {
+  max-width: 60rem;
+  padding: 0 2rem;
   margin: auto;
 }
