@@ -2,8 +2,9 @@ import styles from './404.module.scss';
 import { FC, ReactElement } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
+import { NextPage } from 'next';
 
-const NotFoundPage: FC = (): ReactElement => {
+const NotFoundPage: NextPage = () => {
   return (
     <div className={styles.not_found_page}>
       <Head>

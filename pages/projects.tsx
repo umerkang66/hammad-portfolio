@@ -1,8 +1,9 @@
+import { NextPage } from 'next';
 import Head from 'next/head';
 import { FC, Fragment, ReactElement } from 'react';
 import AllProjects from '../components/all-projects/all-projects';
 
-const Projects: FC = (): ReactElement => {
+const Projects: NextPage = () => {
   return (
     <Fragment>
       <Head>

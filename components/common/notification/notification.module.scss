@@ -1,0 +1,35 @@
+.notification {
+  font-size: var(--default-font-size);
+  font-weight: 600;
+  padding: 0.92rem 2rem 0.92rem 3rem;
+  display: inline-block;
+  border-radius: 2px;
+
+  &__success {
+    background-color: rgb(93, 201, 93);
+  }
+
+  &__error {
+    background-color: rgb(231, 69, 69);
+    color: var(--color-background);
+  }
+
+  &__cross {
+    font-size: 1.4rem;
+    color: var(--color-white);
+    width: 2rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+
+    display: inline-block;
+    background-color: rgba($color: #fff, $alpha: 0.2);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    background-color: var(--color-black);
+
+    &:active {
+      background-color: rgba($color: #fff, $alpha: 0.6);
+    }
+  }
+}
