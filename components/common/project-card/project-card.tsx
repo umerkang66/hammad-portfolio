@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
 import styles from './project-card.module.scss';
-import type { Project as ProjectCardProps } from '../home-page/featured-projects/featured-projects';
+import type { Project as ProjectCardProps } from '../../home-page/featured-projects/featured-projects';
 
 const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
   return (
