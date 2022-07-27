@@ -12,7 +12,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const template = getEmailTemplate(name, email, message);
 
     const transporter = nodemailer.createTransport({
-      service: 'SendinBlue',
+      service: 'SendGrid',
       auth: {
         user: process.env.SEND_IN_BLUE_USERNAME,
         pass: process.env.SEND_IN_BLUE_PASSWORD,
