@@ -54,7 +54,8 @@ const ContactComponent: FC = (): ReactElement => {
       setLoading(false);
       setShowNotification(true);
       setStatus('error');
-      setStatusMessage(err.message || "Couldn't send your message");
+      console.log(err.message);
+      setStatusMessage("Couldn't send your message");
     }
   };
 
