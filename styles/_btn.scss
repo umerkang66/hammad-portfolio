@@ -14,14 +14,15 @@
 
   transition: transform 0.2s ease-out;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    outline: none;
     transform: translateY(-3px);
     // x-axis, y-axis, blur, color
     box-shadow: 0 1rem 2rem rgba(#000, 0.2);
   }
 
-  &:active,
-  &:focus {
+  &:active {
     outline: none;
     // always related to the initial link state
     transform: translateY(-1px);
