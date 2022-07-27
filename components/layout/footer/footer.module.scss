@@ -1,3 +1,5 @@
+@import '../../../styles/mixins';
+
 .footer {
   padding: 7rem 0;
   color: var(--color-grey-dark);
@@ -6,39 +8,19 @@
   &__content {
     display: flex;
     justify-content: space-between;
-  }
 
-  &__icons {
-    display: flex;
-    list-style: none;
-    transform: translateX(-9px);
-  }
-
-  &__icon_list_item {
-    display: inline-block;
-
-    &:not(:last-child) {
-      margin-right: 1rem;
+    @include respond(phone) {
+      flex-direction: column;
+      text-align: center;
     }
   }
 
-  &__icon_link {
-    display: inline-block;
-    height: 2.5rem;
-    width: 2.5rem;
-    padding: 2rem;
-
-    position: relative;
-  }
-
-  &__icon {
-    height: 2.5rem;
-    width: 2.5rem;
-    fill: var(--color-primary);
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  &__right {
+    @include respond(phone) {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }

@@ -20,8 +20,8 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
           alt={props.name}
           className={styles.card__image}
           src={`/images/projects/${props.image}`}
-          width={400}
-          height={250}
+          width={700}
+          height={450}
         />
       </div>
 

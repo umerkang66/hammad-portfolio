@@ -1,4 +1,5 @@
 @import '../../styles/sass-variables';
+@import '../../styles/mixins';
 
 .contact {
   padding: 7rem 0;
@@ -6,9 +7,19 @@
   &__left {
     margin-right: 4rem;
     flex-grow: 1;
+
+    @include respond(tab-port) {
+      width: 70%;
+      margin-right: 0;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 
   &__right {
+    margin-top: 5rem;
     width: 45%;
     &_info {
       display: flex;
@@ -17,6 +28,10 @@
       &:not(:last-child) {
         margin-bottom: 3rem;
       }
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
     }
 
     &_heading {
@@ -28,6 +43,10 @@
 .contact__content {
   display: flex;
   justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
 }
 
 .form {
@@ -67,6 +86,7 @@
     display: flex;
     transition: all 0.2s ease-out;
     margin-bottom: 2rem;
+    justify-content: center;
 
     &_text {
       display: inline-block;

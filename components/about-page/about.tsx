@@ -1,9 +1,21 @@
+import Image from 'next/image';
 import { FC } from 'react';
 import styles from './about.module.scss';
 
 const AboutComponent: FC = () => {
   return (
     <div className={styles.about}>
+      <div
+        className={styles.about__image_container + ' u-margin-bottom-medium'}
+      >
+        <Image
+          src="/images/hammad-full.png"
+          width={1024}
+          height={574}
+          alt="Hammad"
+        />
+      </div>
+
       <div className="container-small">
         <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
           More About me

@@ -97,7 +97,8 @@ const ContactComponent: FC = (): ReactElement => {
                 className={`btn btn--primary ${styles.form__button}`}
                 type="submit"
               >
-                <span className={styles.form__button_text}>Send</span>
+                Send
+                <div className={styles.form__button_text}></div>
                 {loading ? <div className="loader" /> : null}
               </button>
             </form>

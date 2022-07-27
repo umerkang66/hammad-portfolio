@@ -36,7 +36,7 @@ const Hero = () => {
             <div className={styles.hero__buttons}>
               <Link href="/about">
                 <a className="btn btn--primary">
-                  More Info <span className="btn__arrow">&rarr;</span>
+                  More About Me <span className="btn__arrow">&rarr;</span>
                 </a>
               </Link>
               <Link href="/contact">

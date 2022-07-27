@@ -36,6 +36,13 @@
     // this button looks a little bit small
     // so add the same border that the next one has
     border: 2px solid var(--color-primary);
+
+    @include respond(phone) {
+      margin-right: 0;
+      margin-bottom: 2rem;
+      width: 100%;
+      text-align: center;
+    }
   }
 
   &--secondary {
@@ -47,6 +54,12 @@
       border: 3px solid var(--color-primary-light);
       background-color: var(--color-primary);
       color: var(--color-background);
+    }
+
+    @include respond(phone) {
+      margin-right: 0;
+      width: 100%;
+      text-align: center;
     }
   }
 
