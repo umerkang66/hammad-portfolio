@@ -32,16 +32,16 @@ const projects: Project[] = [
     name: 'project 4',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
-    image: 'project-3.jpg',
-    slug: 'project-3',
+    image: 'project-4.jpg',
+    slug: 'project-4',
   },
 
   {
     name: 'project 5',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
-    image: 'project-3.jpg',
-    slug: 'project-3',
+    image: 'project-5.jpg',
+    slug: 'project-5',
   },
 ];
 

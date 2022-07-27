@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
-import type { NavLink as NavLinkProps } from './main-navigation';
+import type { NavLinkInterface } from './main-navigation';
 import styles from './nav-link.module.scss';
 
-const NavLink: FC<NavLinkProps> = ({ href, text }): ReactElement => {
+interface NavLinkProps extends NavLinkInterface {
+  className?: string;
+}
+
+const NavLink: FC<NavLinkProps> = ({ href, text, className }): ReactElement => {
   return (
-    <li className={styles.nav_list_item}>
+    <li className={`${styles.nav_list_item} ${className}`}>
       <Link href={href}>
         <a>{text}</a>
       </Link>

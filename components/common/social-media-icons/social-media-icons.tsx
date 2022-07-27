@@ -16,13 +16,15 @@ const icons: IconsInterface[] = [
 
 interface SocialMediaIconsProps {
   fillColor: 'light' | 'dark';
+  className?: string;
 }
 
 const SocialMediaIcons: FC<SocialMediaIconsProps> = ({
   fillColor,
+  className,
 }): ReactElement => {
   return (
-    <ul className={styles.icons}>
+    <ul className={`${styles.icons} ${className}`}>
       {icons.map(({ type, href }, i) => {
         return (
           <li key={i} className={styles.icon_list_item}>
