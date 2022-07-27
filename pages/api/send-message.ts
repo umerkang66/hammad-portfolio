@@ -12,8 +12,8 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     const template = getEmailTemplate(name, email, message);
 
     const transporter = nodemailer.createTransport({
-      host: 'smtp.sendgrid.net',
-      port: 465,
+      host: 'smtp-relay.sendinblue.com',
+      port: 587,
       auth: {
         user: process.env.SEND_IN_BLUE_USERNAME,
         pass: process.env.SEND_IN_BLUE_PASSWORD,
