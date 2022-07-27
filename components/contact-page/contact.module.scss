@@ -13,6 +13,10 @@
     &_info {
       display: flex;
       align-items: flex-start;
+
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
     }
 
     &_heading {
@@ -59,14 +63,10 @@
     }
   }
 
-  &__submit_result {
-    display: flex;
-    align-items: center;
-  }
-
   &__button {
     display: flex;
     transition: all 0.2s ease-out;
+    margin-bottom: 2rem;
 
     &_text {
       display: inline-block;

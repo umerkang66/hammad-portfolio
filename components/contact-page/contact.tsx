@@ -93,24 +93,22 @@ const ContactComponent: FC = (): ReactElement => {
                 onChange={e => setMessage(e.target.value)}
               />
 
-              <div className={styles.form__submit_result}>
-                <button
-                  className={`btn btn--primary ${styles.form__button}`}
-                  type="submit"
-                >
-                  <span className={styles.form__button_text}>Send</span>
-                  {loading ? <div className="loader" /> : null}
-                </button>
-
-                {showNotification ? (
-                  <Notification
-                    showNotification={setShowNotification}
-                    type={status}
-                    text={statusMessage}
-                  />
-                ) : null}
-              </div>
+              <button
+                className={`btn btn--primary ${styles.form__button}`}
+                type="submit"
+              >
+                <span className={styles.form__button_text}>Send</span>
+                {loading ? <div className="loader" /> : null}
+              </button>
             </form>
+
+            {showNotification ? (
+              <Notification
+                showNotification={setShowNotification}
+                type={status}
+                text={statusMessage}
+              />
+            ) : null}
           </div>
 
           <div className={styles.contact__right}>
