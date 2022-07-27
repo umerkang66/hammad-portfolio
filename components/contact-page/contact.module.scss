@@ -19,7 +19,6 @@
   }
 
   &__right {
-    margin-top: 5rem;
     width: 45%;
     &_info {
       display: flex;
@@ -31,7 +30,13 @@
     }
 
     @include respond(tab-port) {
+      width: 70%;
+      margin-top: 5rem;
+    }
+
+    @include respond(phone) {
       width: 100%;
+      margin-top: 5rem;
     }
 
     &_heading {
