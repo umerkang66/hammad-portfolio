@@ -16,3 +16,5 @@ const App = ({ Component, pageProps }: AppProps) => {
 };
 
 export default App;
+
+// pm2 start npm -- start
