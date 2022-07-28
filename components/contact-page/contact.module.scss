@@ -29,6 +29,12 @@
       }
     }
 
+    &_paragraph {
+      @include respond(phone) {
+        transform: translateX(-4rem);
+      }
+    }
+
     @include respond(tab-port) {
       width: 70%;
       margin-top: 5rem;

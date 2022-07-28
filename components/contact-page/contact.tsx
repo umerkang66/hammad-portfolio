@@ -124,7 +124,9 @@ const ContactComponent: FC = (): ReactElement => {
               >
                 Email:
               </h3>
-              <p className="paragraph">hammadkakli@gmail.com</p>
+              <p className={`${styles.contact__right_paragraph} paragraph`}>
+                hammadkakli@gmail.com
+              </p>
             </div>
 
             <div className={styles.contact__right_info}>

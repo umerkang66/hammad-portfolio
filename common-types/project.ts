@@ -3,4 +3,6 @@ export interface Project {
   description: string;
   image: string;
   slug: string;
+  excerpt: string;
+  isFeatured: boolean;
 }

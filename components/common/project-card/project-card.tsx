@@ -37,7 +37,7 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
               : 'paragraph--card__dark'
           } u-margin-bottom-small`}
         >
-          {props.description}
+          {props.excerpt}
         </p>
 
         <div className={styles.card__link_container}>
