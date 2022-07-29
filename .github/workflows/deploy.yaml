@@ -1,0 +1,21 @@
+name: Deploy Hammad Website
+on:
+  branches:
+    - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: SSH into the server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            cd hammad-portfolio
+            pm2 delete 0
+            git pull origin master
+            npm run bulid
+            pm2 start npm -- start
