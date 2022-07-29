@@ -28,7 +28,9 @@ const ContactComponent: FC = (): ReactElement => {
     }
 
     try {
+      setShowNotification(false);
       setLoading(true);
+      setStatusMessage('');
       const res = await fetch('/api/send-message', {
         method: 'POST',
         headers: {
