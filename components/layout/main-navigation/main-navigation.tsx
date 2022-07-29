@@ -13,6 +13,7 @@ export interface NavLinkInterface {
 
 const navLinks: NavLinkInterface[] = [
   { href: '/about', text: 'About Me' },
+  { href: '/trainings', text: 'Trainings' },
   { href: '/projects', text: 'Projects' },
   { href: '/contact', text: 'Contact Me' },
 ];
