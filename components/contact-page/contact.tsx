@@ -28,7 +28,7 @@ const ContactComponent: FC = (): ReactElement => {
     }
 
     try {
-      // reset the notification state
+      // reset the notification state.
       setShowNotification(false);
       setLoading(true);
       setStatusMessage('');
