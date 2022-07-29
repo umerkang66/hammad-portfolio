@@ -7,6 +7,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: deploy-nodejs-app
         uses: appleboy/ssh-action@v0.1.2
         with:
