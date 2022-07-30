@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './all-projects.module.scss';
 import { allProjects } from '../../../data/all-projects';
-import ProjectsGrid from '../../common/project-grid/projects-grid';
+import ProjectsGrid from '../../common/project-grid/project-grid';
 
 const AllProjects: FC = () => {
   return (

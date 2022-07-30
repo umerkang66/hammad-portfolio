@@ -1,19 +1,19 @@
 import { FC, ReactElement } from 'react';
 import { Project } from '../../../common-types/project';
-import styles from './projects-grid.module.scss';
+import styles from './project-grid.module.scss';
 import ProjectCard from '../project-card/project-card';
 
-interface ProjectsGridProps {
+interface ProjectGridProps {
   projects: Project[];
   background: 'light' | 'dark';
 }
 
-const ProjectsGrid: FC<ProjectsGridProps> = ({
+const ProjectGrid: FC<ProjectGridProps> = ({
   projects,
   background,
 }): ReactElement => {
   return (
-    <div className={styles.projects_grid}>
+    <div className={styles.project_grid}>
       {projects.map(project => {
         return (
           <ProjectCard
@@ -27,4 +27,4 @@ const ProjectsGrid: FC<ProjectsGridProps> = ({
   );
 };
 
-export default ProjectsGrid;
+export default ProjectGrid;

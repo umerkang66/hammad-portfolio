@@ -9,18 +9,6 @@ interface SingleProjectProps {
 const SingleProject: FC<SingleProjectProps> = (props): ReactElement => {
   return (
     <div className={styles.single_project}>
-      <div
-        style={{
-          backgroundImage: `linear-gradient(
-          to right,
-          rgba(0, 0, 0, 0.5),
-          rgba(0, 0, 0, 0.5)
-        ),
-        url('/images/projects/${props.project.image}')`,
-        }}
-        className={styles.single_project__image_container}
-      />
-
       <div className="container">
         <div className={styles.single_project__content}>
           <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">

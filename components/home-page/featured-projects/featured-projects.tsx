@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
 import styles from './featured-projects.module.scss';
-import { Project } from '../../../common-types/project';
-import ProjectsGrid from '../../common/project-grid/projects-grid';
+
+import ProjectGrid from '../../common/project-grid/project-grid';
 import { allProjects } from '../../../data/all-projects';
 
 const FeaturedProjects: FC = (): ReactElement => {
@@ -10,9 +10,9 @@ const FeaturedProjects: FC = (): ReactElement => {
     <section className={styles.featured_projects}>
       <div className="container">
         <h2 className="heading-secondary heading-secondary--white heading-secondary--white__underline u-margin-bottom-medium">
-          Trainings
+          Featured Projects
         </h2>
-        <ProjectsGrid
+        <ProjectGrid
           projects={allProjects.filter(prj => prj.isFeatured)}
           background="dark"
         />

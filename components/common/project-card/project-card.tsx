@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
 import styles from './project-card.module.scss';
@@ -15,16 +14,6 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
         props.background === 'dark' ? styles.card__dark : styles.card__light
       }`}
     >
-      <div className={styles.card__image_container}>
-        <Image
-          alt={props.name}
-          className={styles.card__image}
-          src={`/images/projects/${props.image}`}
-          width={700}
-          height={450}
-        />
-      </div>
-
       <div className={styles.card__content}>
         <h3 className="heading-tertiary u-margin-top-small u-margin-bottom-small">
           {props.name}
