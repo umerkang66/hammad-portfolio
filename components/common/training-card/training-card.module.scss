@@ -2,6 +2,11 @@
   border-radius: 5px;
   padding: 3rem;
 
+  &__link_container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__light {
     background-color: var(--color-background-2);
     color: var(--color-primary);
@@ -22,5 +27,7 @@
     &:not(:last-child) {
       margin-bottom: 5px;
     }
+
+    transform: translateX(1.3rem);
   }
 }

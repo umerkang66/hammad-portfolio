@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { FC, ReactElement } from 'react';
 import { Training } from '../../../common-types/training';
 import styles from './training-card.module.scss';
@@ -23,7 +24,7 @@ const TrainingCard: FC<TrainingCardProps> = ({
         {training.name}
       </h3>
 
-      <ul>
+      <ul className={`u-margin-bottom-small`}>
         {training.excerptDesc.split('-----').map((desc, i) => {
           return (
             <li className={styles.training_card__list_item} key={i}>
@@ -40,6 +41,16 @@ const TrainingCard: FC<TrainingCardProps> = ({
           );
         })}
       </ul>
+
+      <div
+        className={
+          styles.training_card__link_container + ' u-margin-bottom-small'
+        }
+      >
+        <Link href={`/trainings/${training.slug}`}>
+          <a className="btn btn--tertiary">More Info</a>
+        </Link>
+      </div>
     </div>
   );
 };
