@@ -10,7 +10,7 @@ const FeaturedProjects: FC = (): ReactElement => {
     <section className={styles.featured_projects}>
       <div className="container">
         <h2 className="heading-secondary heading-secondary--white heading-secondary--white__underline u-margin-bottom-medium">
-          Featured Projects
+          Trainings
         </h2>
         <ProjectsGrid
           projects={allProjects.filter(prj => prj.isFeatured)}
