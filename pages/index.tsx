@@ -10,6 +10,10 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>Portfolio | Hammad</title>
+        <meta
+          name="description"
+          content="Amazon Account Manager || PPC Expert || PL Wholesale Dropshipping Expert || Amazon Evangelist Consultant and Trainer."
+        />
       </Head>
       <Hero />
       <HomePageTrainings />
