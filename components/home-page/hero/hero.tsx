@@ -9,7 +9,7 @@ const Hero = () => {
         <div className={styles.hero__content}>
           <div className={styles.hero__content_left}>
             <h1 className="heading-primary u-margin-bottom-small">
-              Hi, I am Hammad Kakli, an amazon enthusiast.
+              Hi, I am Hammad Kakli, an amazon enthusiast
             </h1>
 
             <p
