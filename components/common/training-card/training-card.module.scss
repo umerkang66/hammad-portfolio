@@ -1,6 +1,9 @@
 .training_card {
   border-radius: 5px;
   padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &__link_container {
     display: flex;

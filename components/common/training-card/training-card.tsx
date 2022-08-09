@@ -20,27 +20,21 @@ const TrainingCard: FC<TrainingCardProps> = ({
           : styles.training_card__dark
       }`}
     >
-      <h3 className="heading-tertiary heading-tertiary--light u-margin-bottom-small">
-        {training.name}
-      </h3>
+      <div className={styles.training_card__content}>
+        <h3 className="heading-tertiary heading-tertiary--light u-margin-bottom-small">
+          {training.name}
+        </h3>
 
-      <ul className={`u-margin-bottom-small`}>
-        {training.excerptDesc.split('-----').map((desc, i) => {
-          return (
-            <li className={styles.training_card__list_item} key={i}>
-              <p
-                className={`paragraph paragraph--card ${
-                  background === 'dark'
-                    ? 'paragraph--card__light'
-                    : 'paragraph--card__dark'
-                }`}
-              >
-                {desc}
-              </p>
-            </li>
-          );
-        })}
-      </ul>
+        <p
+          className={`paragraph paragraph--card u-margin-bottom-medium ${
+            background === 'dark'
+              ? 'paragraph--card__light'
+              : 'paragraph--card__dark'
+          }`}
+        >
+          {training.excerptDesc}
+        </p>
+      </div>
 
       <div
         className={
