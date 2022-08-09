@@ -20,13 +20,13 @@ const TrainingCard: FC<TrainingCardProps> = ({
           : styles.training_card__dark
       }`}
     >
-      <div className={styles.training_card__content}>
+      <div className={styles.training_card__text_content}>
         <h3 className="heading-tertiary heading-tertiary--light u-margin-bottom-small">
           {training.name}
         </h3>
 
         <p
-          className={`paragraph paragraph--card u-margin-bottom-medium ${
+          className={`paragraph paragraph--card u-margin-bottom-small ${
             background === 'dark'
               ? 'paragraph--card__light'
               : 'paragraph--card__dark'
