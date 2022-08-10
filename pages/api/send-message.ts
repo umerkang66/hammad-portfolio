@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
+import { htmlToText } from 'html-to-text';
 import nodemailer from 'nodemailer';
 import { getEmailTemplate } from '../../email-templates/email';
-import { htmlToText } from 'html-to-text';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
@@ -24,7 +24,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       await transporter.sendMail({
         from: process.env.EMAIL_FROM,
         to: process.env.EMAIL_TO,
-        subject: "Message from Hammad's website",
+        subject: 'Message from My website',
         html: template,
         text: htmlToText(template),
       });
