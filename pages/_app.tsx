@@ -13,7 +13,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <NextNProgress height={5} color="#969799" />
+      <NextNProgress
+        height={3}
+        color="#969799"
+        options={{ showSpinner: false }}
+      />
       <Layout>
         <Component {...pageProps} />;
       </Layout>
