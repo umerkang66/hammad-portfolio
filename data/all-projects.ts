@@ -2,7 +2,7 @@ import { Project } from '../common-types/project';
 
 export const allProjects: Project[] = [
   {
-    name: 'This is the first Project 1',
+    name: 'Project 1',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     slug: 'project-1',
@@ -12,7 +12,7 @@ export const allProjects: Project[] = [
   },
 
   {
-    name: 'This is the second Project 2',
+    name: 'Project 2',
     description:
       'This is the description of the second dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     slug: 'project-2',
@@ -22,7 +22,7 @@ export const allProjects: Project[] = [
   },
 
   {
-    name: 'This is the third Project 3',
+    name: 'Project 3',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     slug: 'project-3',
@@ -32,7 +32,7 @@ export const allProjects: Project[] = [
   },
 
   {
-    name: 'This is the fourth Project 4',
+    name: 'Project 4',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     slug: 'project-4',
@@ -42,7 +42,7 @@ export const allProjects: Project[] = [
   },
 
   {
-    name: 'This is the first Project 5',
+    name: 'Project 5',
     description:
       'This is the description of the first dummy project, This one I did back when i was starting out my career. This is the description of the first dummy project, this one i did back when i was starting out my career',
     slug: 'project-5',

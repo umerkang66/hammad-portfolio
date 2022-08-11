@@ -48,13 +48,13 @@ const Hero = () => {
           </div>
 
           <div className={styles.hero__content_right}>
-            <Image
-              alt="hammad kakli"
-              className={styles.hero__image}
-              src="/images/hammad.png"
-              height={373}
-              width={392}
-            />
+            <div className={styles.hero__image_container}>
+              <img
+                className={styles.hero__image}
+                src="/images/hammad.png"
+                alt="hammad"
+              />
+            </div>
           </div>
         </div>
       </div>
