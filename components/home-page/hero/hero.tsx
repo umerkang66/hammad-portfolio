@@ -46,6 +46,16 @@ const Hero = () => {
               </Link>
             </div>
           </div>
+
+          <div className={styles.hero__content_right}>
+            <div className={styles.hero__image_container}>
+              <img
+                className={styles.hero__image}
+                src="/images/hammad.png"
+                alt="hammad"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
