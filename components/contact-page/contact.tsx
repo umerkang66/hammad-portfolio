@@ -5,6 +5,8 @@ import styles from './contact.module.scss';
 const ContactComponent: FC = (): ReactElement => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [city, setCity] = useState('');
+  const [contactNumber, setContactNumber] = useState('');
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
@@ -14,12 +16,14 @@ const ContactComponent: FC = (): ReactElement => {
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !message || !city || !contactNumber) {
       let msg = 'ERR:';
-      if (!name) msg += ' NAME,';
-      if (!email) msg += ' EMAIL,';
-      if (!message) msg += ' MESSAGE';
-      msg += ' is not defined';
+      if (!name) msg += ' `NAME` ';
+      if (!email) msg += ' `EMAIL` ';
+      if (!city) msg += ' `CITY` ';
+      if (!contactNumber) msg += ' `CONTACT NUMBER` ';
+      if (!message) msg += ' `MESSAGE` ';
+      msg += 'is not defined';
 
       setShowNotification(true);
       setStatus('error');
@@ -41,6 +45,8 @@ const ContactComponent: FC = (): ReactElement => {
           name,
           email,
           message,
+          city,
+          contactNumber,
         }),
       });
 
@@ -87,6 +93,22 @@ const ContactComponent: FC = (): ReactElement => {
                 placeholder="Your Email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
+              />
+              <input
+                className={`${styles.form__input} ${styles.form__input_city}`}
+                type="text"
+                id="city"
+                placeholder="Your City"
+                value={city}
+                onChange={e => setCity(e.target.value)}
+              />
+              <input
+                className={`${styles.form__input} ${styles.form__input_number}`}
+                type="text"
+                id="number"
+                placeholder="Your Contact Number"
+                value={contactNumber}
+                onChange={e => setContactNumber(e.target.value)}
               />
               <textarea
                 className={`${styles.form__input} ${styles.form__input_message} u-margin-bottom-medium`}

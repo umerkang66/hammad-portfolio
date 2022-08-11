@@ -5,11 +5,17 @@ import { getEmailTemplate } from '../../email-templates/email';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
-    const { name, email, message } = req.body;
+    const { name, email, message, city, contactNumber } = req.body;
     if (!name || !email || !message) {
       return res.status(400).send({ message: 'Invalid request' });
     }
-    const template = getEmailTemplate(name, email, message);
+    const template = getEmailTemplate(
+      name,
+      email,
+      message,
+      city,
+      contactNumber
+    );
 
     const transporter = nodemailer.createTransport({
       host: 'smtp-relay.sendinblue.com',

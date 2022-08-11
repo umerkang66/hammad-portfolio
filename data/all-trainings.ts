@@ -132,7 +132,142 @@ export const allTrainings: Training[] = [
     name: trainingsName.amazonPrivateLabel,
     excerptDesc:
       'The main objective of this course is to learn how to create your own brand on Amazon. Amazon account opening. How to register your brand on Amazon, how to hunt source and launch your products. How to check patents. Register trademark, Promotional techniques. How to use different tools. How to find supplier using tools.',
-    description: [],
+    description: [
+      {
+        name: 'Introduction',
+        furtherDesc: [
+          'Why Amazon',
+          'Amazon Business Trends',
+          'Business Potential',
+          'Decision of the marketplace',
+          'Which information needed to create account (Professional, Individual)',
+          'Account Setup',
+        ],
+      },
+
+      {
+        name: 'Product Hunting',
+        furtherDesc: [
+          'Criteria of hunting',
+          'Helium 10, JS',
+          'How to choose the best product',
+          'Design',
+          'Marketplace Analysis',
+        ],
+      },
+
+      {
+        name: 'Category Approval, Patent checking, Trademark issues',
+        furtherDesc: [
+          'How to check patent',
+          'How to check trademark',
+          'How to get approved the selling category',
+        ],
+      },
+
+      {
+        name: 'Product Sourcing',
+        furtherDesc: [
+          'Find source, manufacturer',
+          'Find supplier',
+          'How to check the Competitor Source',
+        ],
+      },
+
+      {
+        name: 'Supplier Verification',
+        furtherDesc: [
+          'How old the supplier is?',
+          'How to check and verify the supplier details in marketplace',
+        ],
+      },
+
+      {
+        name: 'Sampling Ordering and Inventory Management',
+        furtherDesc: [
+          'Inventory restocking and planning',
+          'Order the sample',
+          'Verify the sample',
+        ],
+      },
+
+      {
+        name: 'Cost (Profit Calculation)',
+        furtherDesc: [
+          'FBA Calculator',
+          'Negotiate with supplier',
+          'Automate Pricing',
+        ],
+      },
+
+      {
+        name: 'Keyword Hunting and analysis',
+        furtherDesc: [
+          'Hunt the Keywords using tools, like Helium 10, JS',
+          'Keyword hunting criteria',
+          'Search volume analysis',
+          'Competing Products analysis',
+        ],
+      },
+
+      {
+        name: 'Competitor Analysis',
+        furtherDesc: [
+          'Find competitors keywords',
+          'Sort the competitor keywords',
+        ],
+      },
+
+      {
+        name: 'UPC Purchasing',
+        furtherDesc: ['GS1', 'Nationwide'],
+      },
+
+      {
+        name: 'Listing Creation and optimization',
+        furtherDesc: [
+          'How to Create (i) Title, (ii) Bullet Points, (iii) Descriptions, (iv) Images',
+          'How to use keywords in the listing',
+        ],
+      },
+
+      {
+        name: 'Shipment Creation',
+        furtherDesc: ['Create Labels'],
+      },
+
+      {
+        name: 'Product launching on Amazon',
+        furtherDesc: [
+          'PPC Campaigns (i) Create, (ii) Manage, (iii) Optimize, (iv) Budget Selection (v) Keyword Planning',
+          'Reviews and Ratings',
+          'Many Chat',
+          'Facebook Ads',
+          'Rebate Ads',
+        ],
+      },
+
+      {
+        name: 'Social media, Website',
+        furtherDesc: ['Social Media Accounts'],
+      },
+
+      {
+        name: 'How to handle Account',
+        furtherDesc: [
+          'Manage Seller Central Account',
+          'Handle reports',
+          'Where to download reports',
+          'How to handle cases and manage amazon customer related queries',
+          'Handle Amazon customer support issues.',
+        ],
+      },
+
+      {
+        name: 'How to Register Brand',
+        furtherDesc: ['Amazon Brand Registry'],
+      },
+    ],
     slug: slugify(trainingsName.amazonPrivateLabel.toLowerCase()),
   },
   {
