@@ -23,7 +23,7 @@
       height: 40rem;
       width: 40%;
       z-index: -10;
-      transform: scale(1.35);
+      transform: scale(1.2) translateY(2.5rem);
 
       display: flex;
       justify-content: center;
@@ -41,7 +41,7 @@
   }
 
   &__image_container {
-    height: 90%;
+    height: 100%;
     width: 100%;
 
     position: absolute;
