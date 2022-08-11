@@ -6,7 +6,13 @@ Open the code folder in terminal then RUN (You should have node js installed on 
 npm install
 ```
 
-After installing RUN
+After installing COPY `.env.local[template]` file to `.env.local`, then add all the environment variable values
+
+```
+cp .env.local[template] .env.local
+```
+
+After installing, and copying RUN
 
 ```
 npm run dev
