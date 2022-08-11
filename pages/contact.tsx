@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Fragment } from 'react';
 import ContactComponent from '../components/contact-page/contact';
 
+// contact page
 const Contact: NextPage = () => {
   return (
     <Fragment>
