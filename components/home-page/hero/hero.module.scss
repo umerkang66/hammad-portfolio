@@ -1,7 +1,7 @@
 @import '../../../styles/mixins';
 
 .hero {
-  padding: 10rem 0 10rem 0;
+  padding: 7rem 0 7rem 0;
   overflow: hidden;
   border-bottom: 2px solid rgba($color: #000, $alpha: 0.2);
 
@@ -23,14 +23,10 @@
       height: 40rem;
       width: 40%;
       z-index: -10;
-      // background-color: var(--color-primary);
-      background-image: radial-gradient(
-        var(--color-primary-light) 0%,
-        var(--color-primary, 80%)
-      );
+      transform: scale(1.35);
+
       display: flex;
       justify-content: center;
-      border-radius: 5px;
       overflow: hidden;
       position: relative;
 
