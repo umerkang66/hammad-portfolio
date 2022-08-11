@@ -30,8 +30,8 @@ const SingleTraining: FC<SingleTrainingProps> = ({
                     className={styles.single_training__list_secondary}
                     type="a"
                   >
-                    {trainingDesc.furtherDesc.map(furtherDescription => {
-                      return <li>{furtherDescription}</li>;
+                    {trainingDesc.furtherDesc.map((furtherDescription, i) => {
+                      return <li key={i}>{furtherDescription}</li>;
                     })}
                   </ol>
                 </li>
