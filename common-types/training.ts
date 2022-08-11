@@ -1,6 +1,11 @@
+interface OneDescPoint {
+  name: string;
+  furtherDesc: string[];
+}
+
 export interface Training {
   name: string;
   excerptDesc: string;
-  description: string;
+  description: OneDescPoint[];
   slug: string;
 }

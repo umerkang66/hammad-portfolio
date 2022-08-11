@@ -16,16 +16,28 @@ const SingleTraining: FC<SingleTrainingProps> = ({
           {training.name}
         </h2>
 
+        <h3 className="heading-tertiary u-margin-bottom-medium">
+          What you will learn in this course
+        </h3>
+
         <div className="container-small">
-          <ul>
-            {training.description.split('-----').map((desc, i) => {
+          <ol className={styles.single_training__list_main}>
+            {training.description.map((trainingDesc, i) => {
               return (
-                <li key={i} className="u-margin-bottom-small">
-                  <p className="paragraph paragraph--clear">{desc}</p>
+                <li className="u-margin-bottom-medium" key={i}>
+                  {trainingDesc.name}
+                  <ol
+                    className={styles.single_training__list_secondary}
+                    type="a"
+                  >
+                    {trainingDesc.furtherDesc.map(furtherDescription => {
+                      return <li>{furtherDescription}</li>;
+                    })}
+                  </ol>
                 </li>
               );
             })}
-          </ul>
+          </ol>
         </div>
       </div>
     </div>
