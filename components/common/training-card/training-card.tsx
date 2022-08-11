@@ -20,30 +20,28 @@ const TrainingCard: FC<TrainingCardProps> = ({
           : styles.training_card__dark
       }`}
     >
-      <div className={styles.training_card__text_content}>
-        <h3 className="heading-tertiary heading-tertiary--light u-margin-bottom-small">
-          {training.name}
-        </h3>
-
-        <p
-          className={`paragraph paragraph--card u-margin-bottom-small ${
-            background === 'dark'
-              ? 'paragraph--card__light'
-              : 'paragraph--card__dark'
-          }`}
-        >
-          {training.excerptDesc}
-        </p>
+      <div className={styles.training_card__heading_container}>
+        <h3 className="heading-tertiary">{training.name}</h3>
       </div>
 
-      <div
-        className={
-          styles.training_card__link_container + ' u-margin-bottom-small'
-        }
-      >
-        <Link href={`/trainings/${training.slug}`}>
-          <a className="btn btn--tertiary">More Info</a>
-        </Link>
+      <div className={styles.training_card__content}>
+        <div className={styles.training_card__text_content}>
+          <p
+            className={`paragraph paragraph--card u-margin-bottom-small paragraph--card__dark`}
+          >
+            {training.excerptDesc}
+          </p>
+        </div>
+
+        <div
+          className={
+            styles.training_card__link_container + ' u-margin-bottom-small'
+          }
+        >
+          <Link href={`/trainings/${training.slug}`}>
+            <a className="btn btn--tertiary">More Info</a>
+          </Link>
+        </div>
       </div>
     </div>
   );

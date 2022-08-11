@@ -14,11 +14,12 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
         props.background === 'dark' ? styles.card__dark : styles.card__light
       }`}
     >
-      <div className={styles.card__content}>
-        <h3 className="heading-tertiary u-margin-top-small u-margin-bottom-small">
-          {props.name}
-        </h3>
+      <div className={styles.card__heading_container}>
+        <h3 className="heading-tertiary">{props.name}</h3>
+      </div>
 
+      <div className={styles.card__content}>
+        <div className="u-margin-bottom-small"></div>
         <p
           className={`paragraph paragraph--card ${
             props.background === 'dark'
@@ -28,7 +29,6 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
         >
           {props.excerpt}
         </p>
-
         <div className={styles.card__link_container}>
           <Link href={`/projects/${props.slug}`}>
             <a className="btn btn--tertiary">More Info</a>

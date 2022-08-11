@@ -1,9 +1,9 @@
 @import '../../../styles/mixins';
 
 .footer {
-  padding: 7rem 0;
+  padding: 10rem 0;
   color: var(--color-grey-dark);
-  border-top: 2px solid rgba(34, 34, 34, 0.2);
+  border-top: 2px solid rgba(0, 0, 0, 0.2);
 
   &__content {
     display: flex;

@@ -1,15 +1,13 @@
 @import '../../../styles/mixins';
 
 .hero {
-  padding: 7rem 0 7rem 0;
+  padding: 10rem 0 10rem 0;
   overflow: hidden;
+  border-bottom: 2px solid rgba($color: #000, $alpha: 0.2);
 
   &__content {
-    display: flex;
-    justify-content: space-between;
-
     &_left {
-      width: 60%;
+      width: 70%;
 
       @include respond(tab-port) {
         width: 100%;

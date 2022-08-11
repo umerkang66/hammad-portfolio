@@ -8,11 +8,11 @@ const HomePageTrainings: FC = () => {
     <div className={styles.homepage_trainings}>
       <div className="container">
         <div className={styles.homepage_trainings__content}>
-          <h2 className="heading-secondary heading-secondary--white heading-secondary--white__underline u-margin-bottom-medium">
+          <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
             Trainings
           </h2>
 
-          <TrainingGrid trainings={allTrainings} background={'dark'} />
+          <TrainingGrid trainings={allTrainings} background={'light'} />
         </div>
       </div>
     </div>
