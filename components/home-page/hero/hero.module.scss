@@ -23,7 +23,11 @@
       height: 40rem;
       width: 40%;
       z-index: -10;
-      background-color: var(--color-primary);
+      // background-color: var(--color-primary);
+      background-image: radial-gradient(
+        var(--color-primary-light) 0%,
+        var(--color-primary, 80%)
+      );
       display: flex;
       justify-content: center;
       border-radius: 5px;
