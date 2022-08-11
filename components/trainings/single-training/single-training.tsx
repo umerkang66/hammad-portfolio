@@ -23,8 +23,12 @@ const SingleTraining: FC<SingleTrainingProps> = ({
         <div className="container-small">
           <ol className={styles.single_training__list_main}>
             {training.description.map((trainingDesc, i) => {
+              const className = trainingDesc.furtherDesc.length
+                ? 'u-margin-bottom-medium'
+                : '';
+
               return (
-                <li className="u-margin-bottom-medium" key={i}>
+                <li className={className} key={i}>
                   {trainingDesc.name}
                   <ol
                     className={styles.single_training__list_secondary}

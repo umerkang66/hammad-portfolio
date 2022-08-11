@@ -274,14 +274,173 @@ export const allTrainings: Training[] = [
     name: trainingsName.dropshipping,
     excerptDesc:
       'The main objective of this course is learning how to find retailers in specific market, how to hunt dropship products, how to find dead listings and make them alive. What are the policies of drop shipping on Amazon? How to use different tools. How to manage orders shipments and to learn how to handle customer support.',
-    description: [],
+    description: [
+      {
+        name: 'Introduction',
+        furtherDesc: [
+          'Why Amazon',
+          'Amazon Business Trends',
+          'Business Potential',
+          'Decision of the marketplace',
+          'Which Information needed to Create account (Professional, Individual)',
+          'Account Setup',
+        ],
+      },
+
+      {
+        name: 'Product Hunting',
+        furtherDesc: [
+          'Find branded listing with good BSR',
+          'Using different tools',
+        ],
+      },
+
+      {
+        name: 'How to search dead listings',
+        furtherDesc: ['Tools (i) Helium 10, JS, Keepa'],
+      },
+
+      {
+        name: 'Suppliers Retailers Hunting',
+        furtherDesc: ['By UPC'],
+      },
+
+      {
+        name: 'How to create and attach with the branded listing?',
+        furtherDesc: [
+          'Me Too',
+          'Handling Templates',
+          'Shipment Templates',
+          'Margin Calculation',
+        ],
+      },
+
+      {
+        name: 'Orders Management',
+        furtherDesc: [
+          'How to fulfill Orders',
+          'How to get tracking numbers',
+          'How to update tracking numbers on Amazon',
+          'How to win buybox',
+        ],
+      },
+
+      {
+        name: 'Customer Support',
+        furtherDesc: [
+          'Buyer Customer Support Issues',
+          'Returns and Refunds Management',
+          'Handling Disputes, claims, chargebacks',
+          'Invoicing',
+        ],
+      },
+    ],
     slug: slugify(trainingsName.dropshipping.toLowerCase()),
   },
   {
     name: trainingsName.virtualAssistant,
     excerptDesc:
       'This course is for those who are students or freelancers who have not any investment but they have passion to learn new skills and provide services to their clients. In this course you can learn about how manage seller central account and how to rank your Client’s product from scratch and build an empire. You will learn which services a virtual assistant can provide.',
-    description: [],
+    description: [
+      {
+        name: 'Introduction',
+        furtherDesc: [
+          'Why Amazon',
+          'Amazon Business Trends',
+          'Business Potential',
+          'Decision of the marketplace',
+          'Which information needed to create account (Professional, Individual)',
+          'Account Setup',
+        ],
+      },
+
+      {
+        name: 'Product Hunting',
+        furtherDesc: ['FBA Wholesale', 'Private Label', 'Dropshipping'],
+      },
+
+      {
+        name: 'Listing Creation',
+        furtherDesc: ['FBA Wholesale', 'Private Label', 'Dropshipping'],
+      },
+
+      {
+        name: 'Handling listing issues',
+        furtherDesc: ['FBA Wholesale', 'Private Label', 'Dropshipping'],
+      },
+
+      {
+        name: 'Content Writing',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Sourcing and supplier hunting',
+        furtherDesc: ['FBA Wholesale', 'Private Label', 'Dropshipping'],
+      },
+
+      {
+        name: 'Inventory Management',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Handle FBM Orders',
+        furtherDesc: [],
+      },
+
+      ///////////////////
+
+      {
+        name: 'Handle Buyer Complaints',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Account health issues',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Find and resolve customer support issues',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'How to avoid late shipments and cancelation rate',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Reports Management',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Shipment creation',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Order management',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'PPC Optimization',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'PL Product Launching Strategies (Promotions, Coupons)',
+        furtherDesc: [],
+      },
+
+      {
+        name: 'Listing promotion (How to find honest clients VIA social media or freelancing websites)',
+        furtherDesc: [],
+      },
+    ],
     slug: slugify(trainingsName.virtualAssistant.toLowerCase()),
   },
 ];
