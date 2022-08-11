@@ -9,9 +9,9 @@ const AboutComponent: FC = () => {
         className={styles.about__image_container + ' u-margin-bottom-medium'}
       >
         <Image
-          src="/images/hammad-full.png"
-          width={1024}
-          height={574}
+          src="/images/hammad-full.jpg"
+          width={853}
+          height={595}
           alt="Hammad"
         />
       </div>
