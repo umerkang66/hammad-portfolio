@@ -35,6 +35,10 @@
     transform: translateY(-400px);
   }
 
+  &__navigation {
+    transform: translateX(2rem);
+  }
+
   &__active {
     transform: translateY(0);
   }

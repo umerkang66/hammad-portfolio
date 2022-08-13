@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react';
+import { FC } from 'react';
 import SocialMediaIcons from '../../common/social-media-icons/social-media-icons';
 import NavLink from '../main-navigation/nav-link';
 import styles from './navigation-responsive.module.scss';
@@ -14,7 +14,7 @@ const NavigationResponsive: FC<NavigationResponsiveProps> = ({
   navLinks,
   isResponsiveBtnActive,
   setIsResponsiveBtnActive,
-}): ReactElement => {
+}) => {
   return (
     <div
       className={`${styles.full_screen} ${
