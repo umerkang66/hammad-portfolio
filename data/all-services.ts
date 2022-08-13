@@ -1,4 +1,4 @@
-import { Project } from '../common-types/project';
+import { Service } from '../common-types/service';
 import slugify from 'slugify';
 
 const servicesName = {
@@ -9,7 +9,7 @@ const servicesName = {
   service5: 'Service 5',
 };
 
-export const allProjects: Project[] = [
+export const allServices: Service[] = [
   {
     name: servicesName.service1,
     description:

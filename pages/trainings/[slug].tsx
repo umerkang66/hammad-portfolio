@@ -28,7 +28,7 @@ interface StaticReturnType {
   training: Training;
 }
 
-// Build the pages with this data (project)
+// Build the pages with this data (service)
 export const getStaticProps: GetStaticProps<StaticReturnType> = context => {
   const slug = context.params?.slug;
   const training = allTrainings.find(training => {

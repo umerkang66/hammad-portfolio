@@ -5,54 +5,54 @@ import {
   NextPage,
 } from 'next';
 import { Fragment } from 'react';
-import { Project } from '../../common-types/project';
-import { allProjects } from '../../data/all-projects';
-import SingleProject from '../../components/projects/single-project/single-project';
+import { Service } from '../../common-types/service';
+import { allServices } from '../../data/all-services';
+import SingleService from '../../components/services/single-service/single-service';
 import Head from 'next/head';
 
-const ProjectPage: NextPage<
+const ServicePage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = props => {
   return (
     <Fragment>
       <Head>
-        <title>{props.project.name} | Hammad</title>
+        <title>{props.service.name} | Hammad</title>
       </Head>
-      <SingleProject project={props.project} />
+      <SingleService service={props.service} />
     </Fragment>
   );
 };
 
 interface StaticReturnType {
-  project: Project;
+  service: Service;
 }
 
-// Build the pages with this data (project)
+// Build the pages with this data (service)
 export const getStaticProps: GetStaticProps<StaticReturnType> = context => {
   const slug = context.params?.slug;
-  const project = allProjects.find(project => {
-    return project.slug === slug;
+  const service = allServices.find(service => {
+    return service.slug === slug;
   });
 
   return {
     props: {
-      project: project as Project,
+      service: service as Service,
     },
-    notFound: project === undefined,
+    notFound: service === undefined,
   };
 };
 
 // Which pages we want to build (currently all of them)
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = allProjects.map(project => {
-    return { params: { slug: project.slug } };
+  const paths = allServices.map(service => {
+    return { params: { slug: service.slug } };
   });
 
   return {
     paths,
-    // We have built as many pages, as their all whole projects
+    // We have built as many pages, as their all whole services
     fallback: false,
   };
 };
 
-export default ProjectPage;
+export default ServicePage;

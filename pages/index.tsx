@@ -2,7 +2,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 // Components
 import Hero from '../components/home-page/hero/hero';
-import FeaturedProjects from '../components/home-page/featured-projects/featured-projects';
+import FeaturedServices from '../components/home-page/featured-services/featured-services';
 import HomePageTrainings from '../components/home-page/homepage-trainings/homepage-trainings';
 
 const Home: NextPage = () => {
@@ -17,7 +17,7 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
       <HomePageTrainings />
-      <FeaturedProjects />
+      <FeaturedServices />
     </div>
   );
 };

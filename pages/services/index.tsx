@@ -1,17 +1,17 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import { FC, Fragment, ReactElement } from 'react';
-import AllProjects from '../../components/projects/all-projects/all-projects';
+import { Fragment } from 'react';
+import AllServices from '../../components/services/all-services/all-services';
 
-const Projects: NextPage = () => {
+const services: NextPage = () => {
   return (
     <Fragment>
       <Head>
-        <title>All Projects | Hammad</title>
+        <title>All services | Hammad</title>
       </Head>
-      <AllProjects />
+      <AllServices />
     </Fragment>
   );
 };
 
-export default Projects;
+export default services;

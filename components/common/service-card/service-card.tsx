@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { FC, ReactElement } from 'react';
-import styles from './project-card.module.scss';
-import type { Project } from '../../../common-types/project';
+import styles from './service-card.module.scss';
+import type { Service } from '../../../common-types/service';
 
-interface ProjectCardProps extends Project {
+interface ServiceCardProps extends Service {
   background: 'light' | 'dark';
 }
 
-const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
+const ServiceCard: FC<ServiceCardProps> = (props): ReactElement => {
   return (
     <div
       className={`${styles.card} ${
@@ -39,4 +39,4 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
   );
 };
 
-export default ProjectCard;
+export default ServiceCard;
