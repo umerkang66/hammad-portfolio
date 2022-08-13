@@ -5,6 +5,7 @@ import { Fragment } from 'react';
 import NextNProgress from 'nextjs-progressbar';
 import Head from 'next/head';
 
+// pm2 start npm -- start
 const App = ({ Component, pageProps }: AppProps) => {
   return (
     <Fragment>
@@ -26,5 +27,3 @@ const App = ({ Component, pageProps }: AppProps) => {
 };
 
 export default App;
-
-// pm2 start npm -- start

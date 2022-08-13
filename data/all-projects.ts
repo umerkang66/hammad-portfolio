@@ -14,7 +14,7 @@ export const allProjects: Project[] = [
     name: servicesName.service1,
     description:
       'This is the description of the first dummy service, This one I did back when i was starting out my career. This is the description of the first dummy service, this one i did back when i was starting out my career',
-    slug: slugify(servicesName.service1),
+    slug: slugify(servicesName.service1.toLowerCase()),
     excerpt:
       'This is the description of the first dummy service, This one I did back when i was starting out my career.',
     isFeatured: true,
@@ -24,7 +24,7 @@ export const allProjects: Project[] = [
     name: servicesName.service2,
     description:
       'This is the description of the second dummy service, This one I did back when i was starting out my career. This is the description of the first dummy service, this one i did back when i was starting out my career',
-    slug: slugify(servicesName.service2),
+    slug: slugify(servicesName.service2.toLowerCase()),
     excerpt:
       'This is the description of the second dummy service, This one I did back when i was starting out my career.',
     isFeatured: true,
@@ -34,7 +34,7 @@ export const allProjects: Project[] = [
     name: servicesName.service3,
     description:
       'This is the description of the first dummy service, This one I did back when i was starting out my career. This is the description of the first dummy service, this one i did back when i was starting out my career',
-    slug: slugify(servicesName.service3),
+    slug: slugify(servicesName.service3.toLowerCase()),
     excerpt:
       'This is the description of the first dummy service, This one I did back when i was starting out my career.',
     isFeatured: true,
@@ -44,7 +44,7 @@ export const allProjects: Project[] = [
     name: servicesName.service4,
     description:
       'This is the description of the first dummy service, This one I did back when i was starting out my career. This is the description of the first dummy service, this one i did back when i was starting out my career',
-    slug: slugify(servicesName.service4),
+    slug: slugify(servicesName.service4.toLowerCase()),
     excerpt:
       'This is the description of the first dummy service, This one I did back when i was starting out my career.',
     isFeatured: false,
@@ -54,7 +54,7 @@ export const allProjects: Project[] = [
     name: servicesName.service5,
     description:
       'This is the description of the first dummy service, This one I did back when i was starting out my career. This is the description of the first dummy service, this one i did back when i was starting out my career',
-    slug: slugify(servicesName.service5),
+    slug: slugify(servicesName.service5.toLowerCase()),
     excerpt:
       'This is the description of the first dummy service, This one I did back when i was starting out my career.',
     isFeatured: false,
