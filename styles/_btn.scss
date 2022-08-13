@@ -1,3 +1,5 @@
+@import './sass-variables';
+
 .btn {
   // for <button>
   text-transform: uppercase;
@@ -14,9 +16,16 @@
 
   transition: transform 0.2s ease-out;
 
-  &:hover,
-  &:focus {
+  &:hover {
     outline: none;
+    transform: translateY(-3px);
+    // x-axis, y-axis, blur, color
+    box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+  }
+
+  &:focus {
+    outline: 4px solid var(--color-primary-light);
+    outline-offset: 3px;
     transform: translateY(-3px);
     // x-axis, y-axis, blur, color
     box-shadow: 0 1rem 2rem rgba(#000, 0.2);
@@ -36,6 +45,7 @@
     // this button looks a little bit small
     // so add the same border that the next one has
     border: 2px solid var(--color-primary);
+    transition: all 0.2s ease-out;
 
     @include respond(phone) {
       margin-right: 0;
