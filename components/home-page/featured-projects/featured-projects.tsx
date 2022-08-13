@@ -10,7 +10,7 @@ const FeaturedProjects: FC = (): ReactElement => {
     <section className={styles.featured_projects}>
       <div className="container">
         <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
-          Featured Projects
+          Services
         </h2>
         <ProjectGrid
           projects={allProjects.filter(prj => prj.isFeatured)}
@@ -19,9 +19,9 @@ const FeaturedProjects: FC = (): ReactElement => {
         <div className="u-margin-bottom-medium" />
 
         <div className={styles.featured_projects__link_container}>
-          <Link href="/projects">
+          <Link href="/services">
             <a className="btn btn--secondary btn--secondary__featured_projects">
-              All Projects <span className="btn__arrow">&rarr;</span>
+              All Services <span className="btn__arrow">&rarr;</span>
             </a>
           </Link>
         </div>

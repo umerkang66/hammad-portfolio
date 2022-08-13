@@ -30,7 +30,7 @@ const ProjectCard: FC<ProjectCardProps> = (props): ReactElement => {
           {props.excerpt}
         </p>
         <div className={styles.card__link_container}>
-          <Link href={`/projects/${props.slug}`}>
+          <Link href={`/services/${props.slug}`}>
             <a className="btn btn--tertiary">More Info</a>
           </Link>
         </div>

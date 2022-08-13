@@ -8,7 +8,7 @@ const AllProjects: FC = () => {
     <div className={styles.all_projects}>
       <div className="container">
         <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
-          All Projects
+          All Services
         </h2>
 
         <ProjectsGrid projects={allProjects} background="light" />
