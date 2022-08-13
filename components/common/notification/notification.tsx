@@ -1,4 +1,4 @@
-import { FC, ReactElement } from 'react';
+import { FC, ReactElement, useEffect } from 'react';
 import styles from './notification.module.scss';
 
 interface NotificationProps {
@@ -14,6 +14,16 @@ const Notification: FC<NotificationProps> = ({
 }): ReactElement => {
   const emoji = type === 'success' ? '🚀' : '';
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      showNotification(false);
+    }, 3000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  });
+
   return (
     <div
       className={`${styles.notification} ${
@@ -22,15 +32,16 @@ const Notification: FC<NotificationProps> = ({
           : styles.notification__error
       }`}
     >
-      <p>
+      <p className={styles.notification__text}>
         {emoji} {' ' + text}{' '}
-        <span
-          onClick={() => showNotification(false)}
-          className={styles.notification__cross}
-        >
-          X
-        </span>
       </p>
+
+      <span
+        onClick={() => showNotification(false)}
+        className={styles.notification__cross}
+      >
+        X
+      </span>
     </div>
   );
 };

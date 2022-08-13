@@ -4,6 +4,12 @@
   padding: 0.92rem 2rem 0.92rem 3rem;
   display: inline-block;
   border-radius: 2px;
+  position: relative;
+  transition: all 0.2s ease-out;
+
+  &__text {
+    margin: 1rem 1.5rem 1rem 0;
+  }
 
   &__success {
     background-color: rgb(93, 201, 93);
@@ -20,6 +26,9 @@
     width: 2rem;
     border-radius: 50%;
     margin-left: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 
     display: inline-block;
     background-color: rgba($color: #fff, $alpha: 0.2);

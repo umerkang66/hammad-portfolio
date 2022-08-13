@@ -16,14 +16,18 @@ const ContactComponent: FC = (): ReactElement => {
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    const errorProps = [];
+
     if (!name || !email || !message || !city || !contactNumber) {
-      let msg = 'ERR:';
-      if (!name) msg += ' `NAME` ';
-      if (!email) msg += ' `EMAIL` ';
-      if (!city) msg += ' `CITY` ';
-      if (!contactNumber) msg += ' `CONTACT NUMBER` ';
-      if (!message) msg += ' `MESSAGE` ';
-      msg += 'is not defined';
+      let msg = 'ERR: ';
+      if (!name) errorProps.push('name');
+      if (!email) errorProps.push('email');
+      if (!city) errorProps.push('city');
+      if (!contactNumber) errorProps.push('contact number');
+      if (!message) errorProps.push('message');
+
+      msg += errorProps.join(', ');
+      msg += ' is not defined';
 
       setShowNotification(true);
       setStatus('error');
@@ -126,15 +130,15 @@ const ContactComponent: FC = (): ReactElement => {
                 <div className={styles.form__button_text}></div>
                 {loading ? <div className="loader" /> : null}
               </button>
-            </form>
 
-            {showNotification ? (
-              <Notification
-                showNotification={setShowNotification}
-                type={status}
-                text={statusMessage}
-              />
-            ) : null}
+              {showNotification ? (
+                <Notification
+                  showNotification={setShowNotification}
+                  type={status}
+                  text={statusMessage}
+                />
+              ) : null}
+            </form>
           </div>
 
           <div className={styles.contact__right}>
