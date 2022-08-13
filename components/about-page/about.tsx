@@ -11,7 +11,7 @@ const AboutComponent: FC = () => {
         <Image
           src="/images/hammad-full.jpg"
           width={853}
-          height={595}
+          height={468}
           alt="Hammad"
         />
       </div>
