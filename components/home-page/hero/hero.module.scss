@@ -24,12 +24,16 @@
       height: 40rem;
       width: 40%;
       z-index: -10;
-      transform: scale(1.2) translateY(2.5rem);
+      transform: scale(1.2) translateY(3rem);
 
       display: flex;
       justify-content: center;
       overflow: hidden;
       position: relative;
+
+      @include respond(tab-land) {
+        transform: scale(1.2) translateY(5.3rem);
+      }
 
       @include respond(tab-port) {
         display: none;
@@ -50,10 +54,5 @@
 
     display: flex;
     justify-content: center;
-  }
-
-  &__image {
-    display: inline-block;
-    height: 100%;
   }
 }

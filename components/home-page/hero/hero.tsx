@@ -49,11 +49,14 @@ const Hero = () => {
 
           <div className={styles.hero__content_right}>
             <div className={styles.hero__image_container}>
-              <img
-                className={styles.hero__image}
-                src="/images/hammad.png"
-                alt="hammad"
-              />
+              <div>
+                <Image
+                  src="/images/hammad.png"
+                  alt="hammad"
+                  height={394}
+                  width={365}
+                />
+              </div>
             </div>
           </div>
         </div>
