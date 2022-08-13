@@ -10,7 +10,8 @@ const About: NextPage = () => {
         <title>About me | Hammad</title>
         <meta
           name="description"
-          content="Amazon Account Manager || PPC Expert || PL Wholesale Dropshipping Expert || Amazon Evangelist Consultant and Trainer."
+          content="Experienced Professional Freelancer with a demonstrated history of
+          working in the E-Commerce/internet industry."
         />
       </Head>
       <AboutComponent />

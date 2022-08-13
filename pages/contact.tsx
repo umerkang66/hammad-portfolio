@@ -8,10 +8,7 @@ const Contact: NextPage = () => {
     <Fragment>
       <Head>
         <title>Contact Me | Hammad</title>
-        <meta
-          name="description"
-          content="Amazon Account Manager || PPC Expert || PL Wholesale Dropshipping Expert || Amazon Evangelist Consultant and Trainer."
-        />
+        <meta name="description" content="Contact Me" />
       </Head>
       <ContactComponent />
     </Fragment>
