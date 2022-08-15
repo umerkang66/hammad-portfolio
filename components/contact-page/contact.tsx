@@ -18,14 +18,13 @@ const ContactComponent: FC = (): ReactElement => {
 
     const errorProps = [];
 
-    setMessage(prevValue => prevValue.trim());
-    if (!name || !email || !message || !city || !contactNumber) {
+    if (!name || !email || !message.trim() || !city || !contactNumber) {
       let msg = 'ERR: ';
       if (!name) errorProps.push('name');
       if (!email) errorProps.push('email');
       if (!city) errorProps.push('city');
       if (!contactNumber) errorProps.push('contact number');
-      if (!message) errorProps.push('message');
+      if (!message.trim()) errorProps.push('message');
 
       msg += errorProps.join(', ');
       msg += ' is not defined';
