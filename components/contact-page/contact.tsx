@@ -18,6 +18,7 @@ const ContactComponent: FC = (): ReactElement => {
 
     const errorProps = [];
 
+    setMessage(prevValue => prevValue.trim());
     if (!name || !email || !message || !city || !contactNumber) {
       let msg = 'ERR: ';
       if (!name) errorProps.push('name');
@@ -119,7 +120,7 @@ const ContactComponent: FC = (): ReactElement => {
                 id="message"
                 placeholder="Your Message"
                 value={message}
-                onChange={e => setMessage(e.target.value.trim())}
+                onChange={e => setMessage(e.target.value)}
               />
 
               <button
