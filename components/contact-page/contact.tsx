@@ -119,7 +119,7 @@ const ContactComponent: FC = (): ReactElement => {
                 id="message"
                 placeholder="Your Message"
                 value={message}
-                onChange={e => setMessage(e.target.value)}
+                onChange={e => setMessage(e.target.value.trim())}
               />
 
               <button
