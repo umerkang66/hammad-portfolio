@@ -1,15 +1,15 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { htmlToText } from 'html-to-text';
-import nodemailer from 'nodemailer';
-import { getEmailTemplate } from '../../email-templates/email';
+import { getMessageTemplate } from '../../email-utils/message-template';
+import { Email } from '../../email-utils/email';
 
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email, message, city, contactNumber } = req.body;
     if (!name || !email || !message) {
-      return res.status(400).send({ message: 'Invalid request' });
+      const message = 'Invalid request, name, email, or message is not defined';
+      return res.status(400).send({ message });
     }
-    const template = getEmailTemplate(
+    const template = getMessageTemplate(
       name,
       email,
       message,
@@ -17,25 +17,13 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       contactNumber
     );
 
-    const transporter = nodemailer.createTransport({
-      host: 'smtp-relay.sendinblue.com',
-      port: 587,
-      auth: {
-        user: process.env.SEND_IN_BLUE_USERNAME,
-        pass: process.env.SEND_IN_BLUE_PASSWORD,
-      },
-    });
-
     try {
-      await transporter.sendMail({
-        from: process.env.EMAIL_FROM,
-        to: process.env.EMAIL_TO,
-        subject: 'Message from My website',
-        html: template,
-        text: htmlToText(template),
-      });
+      await new Email('Message from My website', template).send();
+
       res.send({ message: 'Email sent successfully' });
     } catch (err: any) {
+      console.log('🛑🛑🛑', err);
+
       res.status(500).send({ message: err.message || "Couldn't send message" });
     }
   } else {

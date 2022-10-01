@@ -14,13 +14,6 @@ const Notification: FC<NotificationProps> = ({
 }): ReactElement => {
   const emoji = type === 'success' ? '🚀' : '';
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      showNotification(false);
-    }, 5000);
-    return () => clearTimeout(timer);
-  });
-
   return (
     <div
       className={`${styles.notification} ${
