@@ -15,9 +15,9 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
           script: |
+            pm2 delete 0
             cd hammad-portfolio
             git pull origin master
             npm install
             npm run build
-            pm2 delete 0
             pm2 start npm -- start
