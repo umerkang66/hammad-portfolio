@@ -16,11 +16,11 @@ const SingleTraining: FC<SingleTrainingProps> = ({
           {training.name}
         </h2>
 
-        <h3 className="heading-tertiary u-margin-bottom-medium">
+        <h3 className="heading-secondary u-margin-bottom-medium">
           What you will learn in this course
         </h3>
 
-        <div className="container-small">
+        <div className={styles.single_training__content}>
           <ol className={styles.single_training__list_main}>
             {training.description.map((trainingDesc, i) => {
               const className = trainingDesc.furtherDesc.length

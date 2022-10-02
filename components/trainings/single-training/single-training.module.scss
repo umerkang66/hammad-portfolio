@@ -1,6 +1,10 @@
 .single_training {
   padding: 10rem 0;
 
+  &__content {
+    margin-left: 10rem;
+  }
+
   &__list_main {
     font-size: 2rem;
     font-weight: 600;
@@ -9,6 +13,6 @@
   &__list_secondary {
     font-size: 1.6rem;
     font-weight: 400;
-    margin-left: 6rem;
+    margin-left: 3rem;
   }
 }

@@ -5,9 +5,8 @@ import { Email } from '../../email-utils/email';
 async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email, message, city, contactNumber } = req.body;
-    if (!name || !email || !message) {
-      const message = 'Invalid request, name, email, or message is not defined';
-      return res.status(400).send({ message });
+    if (!name || !email || !message || !city || !contactNumber) {
+      return res.status(400).send({ message: 'Invalid request parameters' });
     }
     const template = getMessageTemplate(
       name,

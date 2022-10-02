@@ -14,14 +14,8 @@ const ServiceGrid: FC<ServiceGridProps> = ({
 }): ReactElement => {
   return (
     <div className={styles.service_grid}>
-      {services.map(service => {
-        return (
-          <ServiceCard
-            key={service.slug}
-            {...service}
-            background={background}
-          />
-        );
+      {services.map((service, i) => {
+        return <ServiceCard key={i} {...service} background={background} />;
       })}
     </div>
   );

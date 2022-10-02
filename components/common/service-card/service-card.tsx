@@ -17,24 +17,6 @@ const ServiceCard: FC<ServiceCardProps> = (props): ReactElement => {
       <div className={styles.card__heading_container}>
         <h3 className="heading-tertiary">{props.name}</h3>
       </div>
-
-      <div className={styles.card__content}>
-        <div className="u-margin-bottom-small"></div>
-        <p
-          className={`paragraph paragraph--card ${
-            props.background === 'dark'
-              ? 'paragraph--card__light'
-              : 'paragraph--card__dark'
-          } u-margin-bottom-small`}
-        >
-          {props.excerpt}
-        </p>
-        <div className={styles.card__link_container}>
-          <Link href={`/services/${props.slug}`}>
-            <a className="btn btn--tertiary">More Info</a>
-          </Link>
-        </div>
-      </div>
     </div>
   );
 };

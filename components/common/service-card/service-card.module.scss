@@ -2,35 +2,36 @@
   border-radius: 5px;
 
   &__heading_container {
-    background-color: var(--color-primary);
     padding: 1rem 3rem 1rem 3rem;
     height: 8rem;
     width: 100%;
-    color: var(--color-background);
     display: flex;
     align-items: center;
-  }
-
-  &__content {
-    padding: 0 3rem 4rem 3rem;
-  }
-
-  &__link_container {
-    display: flex;
-    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
   }
 
   &__dark {
     background-color: var(--color-primary-light);
     color: var(--color-background);
-    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
     border: 5px solid var(--color-primary-dark);
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-background);
+      box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
+    }
   }
 
   &__light {
     background-color: var(--color-background);
     color: var(--color-grey-dark);
-    box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.15);
     border: 5px solid var(--color-primary);
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-background);
+      box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
+    }
   }
 }
