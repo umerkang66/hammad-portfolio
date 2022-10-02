@@ -18,6 +18,6 @@ jobs:
             pm2 delete 0
             cd hammad-portfolio
             git pull origin master
-            npm install
-            npm run build
-            pm2 start npm -- start
+            yarn install
+            yarn build
+            pm2 start yarn -- start

@@ -25,6 +25,10 @@
 .heading-tertiary {
   font-size: 2rem;
   text-transform: uppercase;
+
+  &-white {
+    color: var(--color-background);
+  }
 }
 
 .paragraph {

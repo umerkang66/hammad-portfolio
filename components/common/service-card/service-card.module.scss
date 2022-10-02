@@ -1,5 +1,11 @@
 .card {
   border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.card_front {
+  border-radius: 5px;
 
   &__heading_container {
     padding: 1rem 3rem 1rem 3rem;
@@ -15,23 +21,34 @@
     background-color: var(--color-primary-light);
     color: var(--color-background);
     border: 5px solid var(--color-primary-dark);
-
-    &:hover {
-      background-color: var(--color-primary);
-      color: var(--color-background);
-      box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
-    }
   }
 
   &__light {
     background-color: var(--color-background);
     color: var(--color-grey-dark);
     border: 5px solid var(--color-primary);
+  }
+}
 
-    &:hover {
-      background-color: var(--color-primary);
-      color: var(--color-background);
-      box-shadow: 0 2rem 4rem rgba($color: #000000, $alpha: 0.4);
-    }
+.card_back {
+  cursor: pointer;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--color-primary);
+  transform: translateY(-100%);
+  transition: all 0.3s ease-out;
+
+  &__text_container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card:hover {
+  .card_back {
+    transform: translateY(0);
   }
 }

@@ -9,15 +9,29 @@ interface ServiceCardProps extends Service {
 
 const ServiceCard: FC<ServiceCardProps> = (props): ReactElement => {
   return (
-    <div
-      className={`${styles.card} ${
-        props.background === 'dark' ? styles.card__dark : styles.card__light
-      }`}
-    >
-      <div className={styles.card__heading_container}>
-        <h3 className="heading-tertiary">{props.name}</h3>
+    <Link href={'/contact'}>
+      <div className={styles.card}>
+        <div className={styles.card_back}>
+          <div className={styles.card_back__text_container}>
+            <div className="heading-tertiary heading-tertiary-white">
+              More Info
+            </div>
+          </div>
+        </div>
+
+        <div
+          className={`${styles.card_front} ${
+            props.background === 'dark'
+              ? styles.card_front__dark
+              : styles.card_front__light
+          }`}
+        >
+          <div className={styles.card_front__heading_container}>
+            <h3 className="heading-tertiary">{props.name}</h3>
+          </div>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
