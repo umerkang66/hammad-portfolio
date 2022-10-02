@@ -89,6 +89,7 @@ const ContactComponent: FC = (): ReactElement => {
                 placeholder="Your Name"
                 value={name}
                 onChange={e => setName(e.target.value)}
+                autoComplete="off"
               />
               <input
                 className={`${styles.form__input} ${styles.form__input_email}`}
@@ -97,6 +98,7 @@ const ContactComponent: FC = (): ReactElement => {
                 placeholder="Your Email"
                 value={email}
                 onChange={e => setEmail(e.target.value)}
+                autoComplete="off"
               />
               <input
                 className={`${styles.form__input} ${styles.form__input_city}`}
@@ -105,6 +107,7 @@ const ContactComponent: FC = (): ReactElement => {
                 placeholder="Your City"
                 value={city}
                 onChange={e => setCity(e.target.value)}
+                autoComplete="off"
               />
               <input
                 className={`${styles.form__input} ${styles.form__input_number}`}
@@ -113,6 +116,7 @@ const ContactComponent: FC = (): ReactElement => {
                 placeholder="Your Contact Number"
                 value={contactNumber}
                 onChange={e => setContactNumber(e.target.value)}
+                autoComplete="off"
               />
               <textarea
                 className={`${styles.form__input} ${styles.form__input_message} u-margin-bottom-medium`}
