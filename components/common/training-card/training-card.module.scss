@@ -28,14 +28,14 @@
     background-color: var(--color-background);
     color: var(--color-grey-dark);
 
-    border: 5px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
 
   &__dark {
     background-color: var(--color-primary-light);
     color: var(--color-background);
 
-    border: 5px solid var(--color-primary);
+    border: 2px solid var(--color-primary);
   }
 
   &__list_item {
