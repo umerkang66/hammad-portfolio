@@ -9,7 +9,7 @@ interface ServiceCardProps extends Service {
 
 const ServiceCard: FC<ServiceCardProps> = (props): ReactElement => {
   return (
-    <Link href={`/contact`}>
+    <Link href={'/contact'}>
       <div className={styles.card}>
         <div className={styles.card_back}>
           <div className={styles.card_back__text_container}>
