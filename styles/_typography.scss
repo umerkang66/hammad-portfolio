@@ -51,4 +51,13 @@
     color: var(--color-black);
     font-size: 2rem;
   }
+
+  &--footer {
+    color: var(--color-black);
+    font-size: 1.8rem;
+
+    &__bold {
+      font-weight: 600;
+    }
+  }
 }

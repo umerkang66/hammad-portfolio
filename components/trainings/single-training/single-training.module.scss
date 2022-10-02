@@ -1,8 +1,14 @@
+@import '../../../styles/mixins';
+
 .single_training {
   padding: 10rem 0;
 
   &__content {
     margin-left: 10rem;
+
+    @include respond(phone) {
+      margin-left: 4rem;
+    }
   }
 
   &__list_main {

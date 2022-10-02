@@ -169,7 +169,7 @@ const ContactComponent: FC = (): ReactElement => {
               >
                 Phone:
               </h3>
-              <p className="paragraph">+923217796479</p>
+              <p className="paragraph">(+92) 321 7796479</p>
             </div>
 
             <div className={styles.contact__right_info}>
