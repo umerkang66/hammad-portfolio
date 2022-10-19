@@ -26,7 +26,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
       res.status(500).send({ message: err.message || "Couldn't send message" });
     }
   } else {
-    return res.status(400).json({ message: "Endpoint doesn't exit" });
+    return res.status(400).json({ message: "API Endpoint doesn't exit" });
   }
 }
 

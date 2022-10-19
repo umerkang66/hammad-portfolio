@@ -1,5 +1,4 @@
 import styles from './404.module.scss';
-import { FC, ReactElement } from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import { NextPage } from 'next';
