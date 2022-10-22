@@ -22,14 +22,9 @@ const Footer: FC = (): ReactElement => {
                 <span className="paragraph--footer__bold">Email:</span>{' '}
                 hammadkakli@gmail.com
               </p>
-              <p className="paragraph paragraph--footer">
+              <p className="paragraph paragraph--footer u-margin-bottom-medium">
                 <span className="paragraph--footer__bold">Phone:</span> (+92)
                 321 7796479
-              </p>
-              <p className="paragraph paragraph--footer u-margin-bottom-medium">
-                <span className="paragraph--footer__bold">Address:</span> Plot
-                No 9, Sadaat Avenue Moulana Shoukat Ali Road Near Jinnah
-                Hospital Lahore
               </p>
             </div>
 

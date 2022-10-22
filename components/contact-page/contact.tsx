@@ -171,18 +171,6 @@ const ContactComponent: FC = (): ReactElement => {
               </h3>
               <p className="paragraph">(+92) 321 7796479</p>
             </div>
-
-            <div className={styles.contact__right_info}>
-              <h3
-                className={`heading-tertiary ${styles.contact__right_heading}`}
-              >
-                Address:
-              </h3>
-              <p className="paragraph">
-                Plot No 9, Sadaat Avenue Moulana Shoukat Ali Road Near Jinnah
-                Hospital Lahore
-              </p>
-            </div>
           </div>
         </div>
       </div>
