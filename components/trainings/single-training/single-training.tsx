@@ -24,7 +24,7 @@ const SingleTraining: FC<Props> = ({ training }): ReactElement => {
         [i]: descPoint.furtherDesc,
       }));
     });
-  }, []);
+  }, [training.description]);
 
   return (
     <div className={styles.single_training}>
