@@ -21,7 +21,9 @@ const TrainingCard: FC<TrainingCardProps> = ({
       }`}
     >
       <div className={styles.training_card__heading_container}>
-        <h3 className="heading-tertiary">{training.name}</h3>
+        <h3 className="heading-tertiary heading-tertiary-white">
+          {training.name}
+        </h3>
       </div>
 
       <div className={styles.training_card__content}>
