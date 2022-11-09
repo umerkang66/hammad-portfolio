@@ -2,7 +2,7 @@ import '../styles/main.scss';
 import { AppProps } from 'next/app';
 import Layout from '../components/layout/layout';
 import { Fragment } from 'react';
-import NextNProgress from 'nextjs-progressbar';
+// import NextNProgress from 'nextjs-progressbar';
 import Head from 'next/head';
 
 // pm2 start npm -- start
@@ -14,11 +14,11 @@ const App = ({ Component, pageProps }: AppProps) => {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <NextNProgress
+      {/* <NextNProgress
         height={3}
         color="#1d9ed1"
         options={{ showSpinner: false }}
-      />
+      /> */}
       <Layout>
         <Component {...pageProps} />;
       </Layout>
