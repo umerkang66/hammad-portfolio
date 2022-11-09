@@ -29,10 +29,6 @@ const SingleTraining: FC<Props> = ({ training }): ReactElement => {
   return (
     <div className={styles.single_training}>
       <div className="container">
-        {/* <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
-          {training.name}
-        </h2> */}
-
         <h2 className={styles.single_training__heading}>{training.name}</h2>
 
         <h3 className="heading-tertiary u-margin-bottom-small">
@@ -71,7 +67,9 @@ const SingleTraining: FC<Props> = ({ training }): ReactElement => {
             return (
               <div key={i}>
                 <div className={styles.single_training__main_desc}>
-                  <h2>{i + 1 + ': ' + desc}</h2>
+                  <h2 className={styles.single_training__main_desc__heading}>
+                    {i + 1 + ': ' + desc}
+                  </h2>
 
                   {furtherDescriptions[i].length >= 1 && (
                     <button
