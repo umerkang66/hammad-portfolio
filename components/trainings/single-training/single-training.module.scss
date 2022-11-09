@@ -20,6 +20,13 @@
     display: inline-block;
     margin-bottom: 2rem;
     color: var(--color-primary);
+
+    @include respond(tab-port) {
+      font-size: 6rem;
+    }
+    @include respond(phone) {
+      font-size: 4rem;
+    }
   }
 
   &__content {
@@ -89,6 +96,8 @@
   border: none;
   cursor: pointer;
   border-bottom: 2px solid var(--color-primary);
+
+  margin: 2rem 0;
 }
 
 .section_close {

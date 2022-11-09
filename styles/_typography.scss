@@ -3,6 +3,10 @@
   font-weight: 600;
   color: var(--color-primary);
 
+  @include respond(phone) {
+    font-size: 2.6rem;
+  }
+
   // temporary
   margin-bottom: 2rem;
 }
