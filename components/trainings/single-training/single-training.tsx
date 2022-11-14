@@ -1,4 +1,4 @@
-import { FC, ReactElement, useEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
 import { Training } from '../../../common-types/training';
 import styles from './single-training.module.scss';
 
@@ -6,7 +6,7 @@ interface Props {
   training: Training;
 }
 
-const SingleTraining: FC<Props> = ({ training }): ReactElement => {
+const SingleTraining: FC<Props> = ({ training }) => {
   const [mainDescriptions, setMainDescriptions] = useState<string[]>([]);
   const [furtherDescriptions, setFurtherDescriptions] = useState<{
     [key: number]: string[];
@@ -74,9 +74,10 @@ const SingleTraining: FC<Props> = ({ training }): ReactElement => {
                   {furtherDescriptions[i].length >= 1 && (
                     <button
                       onClick={() => {
-                        setWhichBlockActive(prevState => {
-                          return { ...prevState, [i]: !prevState[i] };
-                        });
+                        setWhichBlockActive(prevState => ({
+                          ...prevState,
+                          [i]: !prevState[i],
+                        }));
                       }}
                       className={`${styles.single_training__main_desc_btn} ${
                         whichBlockActive[i] &&
