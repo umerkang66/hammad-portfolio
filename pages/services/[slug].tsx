@@ -7,7 +7,7 @@ import {
 import { Fragment } from 'react';
 import { Service } from '../../common-types/service';
 import { allServices } from '../../data/all-services';
-import SingleService from '../../components/services/single-service/single-service';
+import SingleService from '../../components/services/single-service';
 import Head from 'next/head';
 
 const ServicePage: NextPage<

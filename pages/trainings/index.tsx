@@ -1,7 +1,7 @@
 import { Fragment } from 'react';
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next';
 import Head from 'next/head';
-import TrainingsComponent from '../../components/trainings/all-trainings/all-trainings';
+import TrainingsComponent from '../../components/trainings/all-trainings';
 import { allTrainings } from '../../data/all-trainings';
 import { Training } from '../../common-types/training';
 

@@ -1,6 +1,6 @@
 import { FC, Fragment, ReactElement, ReactNode } from 'react';
-import MainNavigation from './main-navigation/main-navigation';
-import Footer from './footer/footer';
+import MainNavigation from './main-navigation';
+import Footer from './footer';
 
 interface LayoutProps {
   children?: ReactNode;

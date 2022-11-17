@@ -9,7 +9,7 @@ import { Fragment } from 'react';
 import Head from 'next/head';
 import { allTrainings } from '../../data/all-trainings';
 import { Training } from '../../common-types/training';
-import SingleTraining from '../../components/trainings/single-training/single-training';
+import SingleTraining from '../../components/trainings/single-training';
 
 const TrainingPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>

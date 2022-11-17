@@ -1,9 +1,9 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { Fragment } from 'react';
-import AboutComponent from '../components/about-page/about';
+import About from '../components/about';
 
-const About: NextPage = () => {
+const AboutPage: NextPage = () => {
   return (
     <Fragment>
       <Head>
@@ -14,9 +14,9 @@ const About: NextPage = () => {
           working in the E-Commerce/internet industry."
         />
       </Head>
-      <AboutComponent />
+      <About />
     </Fragment>
   );
 };
 
-export default About;
+export default AboutPage;
