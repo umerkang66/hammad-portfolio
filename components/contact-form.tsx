@@ -15,11 +15,6 @@ interface FormValues {
 const ContactForm: FC = (): ReactElement => {
   const notificationContext = useContext(NotificationContext);
   const [loading, setLoading] = useState(false);
-  const [showNotification, setShowNotification] = useState(false);
-  const [status, setStatus] = useState<{
-    type: 'success' | 'error';
-    message: string;
-  }>({ type: 'success', message: '' });
 
   const onFormSubmit = async (
     values: FormValues,

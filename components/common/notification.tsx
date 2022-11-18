@@ -3,6 +3,7 @@ import NotificationContext from '../../contexts/notification-context';
 import styles from './notification.module.scss';
 
 const NotificationComponent: FC = () => {
+  // where context will be received, and from where context will be called, both components will be rerendered
   const notificationContext = useContext(NotificationContext);
 
   if (!notificationContext.notificationText) {
