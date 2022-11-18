@@ -1,44 +1,35 @@
-import { FC, ReactElement } from 'react';
-import ReactDOM from 'react-dom';
+import { FC, useContext } from 'react';
+import NotificationContext from '../../contexts/notification-context';
 import styles from './notification.module.scss';
 
-interface Props {
-  text: string;
-  type: 'success' | 'error';
-  showNotification(toShow: boolean): void;
-}
+const NotificationComponent: FC = () => {
+  const notificationContext = useContext(NotificationContext);
 
-const Notification: FC<Props> = ({
-  text,
-  type,
-  showNotification,
-}): ReactElement => {
-  const emoji = type === 'success' ? '🚀' : '';
-  const JSX = (
+  if (!notificationContext.notificationText) {
+    // If there is no notification, this should be empty string
+    return null;
+  }
+
+  const emoji = notificationContext.type === 'success' ? '🚀' : '';
+  return (
     <div
       className={`${styles.notification} ${
-        type === 'success'
+        notificationContext.type === 'success'
           ? styles.notification__success
           : styles.notification__error
       }`}
     >
       <p className={styles.notification__text}>
-        {emoji} {' ' + text}{' '}
+        {emoji} {' ' + notificationContext.notificationText}{' '}
       </p>
       <span
-        onClick={() => showNotification(false)}
+        onClick={() => notificationContext.hideNotification()}
         className={styles.notification__cross}
       >
         X
       </span>
     </div>
   );
-
-  // this "notification" element is present in _app.tsx
-  return ReactDOM.createPortal(
-    JSX,
-    document.getElementById('notification') as HTMLElement
-  );
 };
 
-export default Notification;
+export default NotificationComponent;

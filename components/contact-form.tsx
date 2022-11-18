@@ -1,8 +1,8 @@
-import { FC, ReactElement, useState } from 'react';
-import Notification from './common/notification';
+import { FC, ReactElement, useContext, useState } from 'react';
 import styles from './contact-form.module.scss';
 import { Formik, Field, Form, FormikHelpers, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import NotificationContext from '../contexts/notification-context';
 
 interface FormValues {
   name: string;
@@ -13,6 +13,7 @@ interface FormValues {
 }
 
 const ContactForm: FC = (): ReactElement => {
+  const notificationContext = useContext(NotificationContext);
   const [loading, setLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [status, setStatus] = useState<{
@@ -26,9 +27,8 @@ const ContactForm: FC = (): ReactElement => {
   ) => {
     try {
       // reset the notification state.
-      setShowNotification(false);
+      notificationContext.hideNotification();
       setLoading(true);
-      setStatus({ type: 'success', message: '' });
 
       const res = await fetch('/api/send-message', {
         method: 'POST',
@@ -48,12 +48,17 @@ const ContactForm: FC = (): ReactElement => {
 
       formikHelpers.resetForm();
       setLoading(false);
-      setShowNotification(true);
-      setStatus({ type: 'success', message: 'Message is sent successfully' });
+      notificationContext.showNotification({
+        type: 'success',
+        notificationText: 'Message is sent successfully',
+      });
     } catch (err: any) {
       setLoading(false);
-      setShowNotification(true);
-      setStatus({ type: 'error', message: "Couldn't send your message" });
+
+      notificationContext.showNotification({
+        type: 'error',
+        notificationText: "Couldn't send your message",
+      });
       console.log(err.message);
     }
   };
@@ -159,14 +164,6 @@ const ContactForm: FC = (): ReactElement => {
                   <div className={styles.form__button_text}></div>
                   {loading ? <div className="loader" /> : null}
                 </button>
-
-                {showNotification ? (
-                  <Notification
-                    showNotification={setShowNotification}
-                    type={status.type}
-                    text={status.message}
-                  />
-                ) : null}
               </Form>
             </Formik>
           </div>

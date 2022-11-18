@@ -1,6 +1,7 @@
 import { FC, Fragment, ReactElement, ReactNode } from 'react';
 import MainNavigation from './main-navigation';
 import Footer from './footer';
+import NotificationComponent from '../common/notification';
 
 interface LayoutProps {
   children?: ReactNode;
@@ -13,6 +14,7 @@ const Layout: FC<LayoutProps> = (props): ReactElement => {
       <MainNavigation />
       <main>{props.children}</main>
       <Footer />
+      <NotificationComponent />
     </Fragment>
   );
 };
