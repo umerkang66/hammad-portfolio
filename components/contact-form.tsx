@@ -12,7 +12,7 @@ interface FormValues {
   message: string;
 }
 
-const FormComponent: FC = (): ReactElement => {
+const ContactForm: FC = (): ReactElement => {
   const [loading, setLoading] = useState(false);
   const [showNotification, setShowNotification] = useState(false);
   const [status, setStatus] = useState<{
@@ -29,6 +29,7 @@ const FormComponent: FC = (): ReactElement => {
       setShowNotification(false);
       setLoading(true);
       setStatus({ type: 'success', message: '' });
+
       const res = await fetch('/api/send-message', {
         method: 'POST',
         headers: {
@@ -42,11 +43,8 @@ const FormComponent: FC = (): ReactElement => {
           contactNumber: values.contactNumber,
         }),
       });
-
       const body = await res.json();
-      if (!res.ok) {
-        throw new Error(body.message);
-      }
+      if (!res.ok) throw new Error(body.message);
 
       formikHelpers.resetForm();
       setLoading(false);
@@ -83,9 +81,7 @@ const FormComponent: FC = (): ReactElement => {
       <div className="container">
         <div className={styles.contact__content}>
           <div className={styles.contact__left}>
-            <h2
-              className={`heading-secondary heading-secondary__underline u-margin-bottom-medium`}
-            >
+            <h2 className="heading-secondary heading-secondary__underline u-margin-bottom-medium">
               Contact Me
             </h2>
 
@@ -157,6 +153,7 @@ const FormComponent: FC = (): ReactElement => {
                 <button
                   className={`btn btn--primary ${styles.form__button}`}
                   type="submit"
+                  disabled={loading}
                 >
                   Send
                   <div className={styles.form__button_text}></div>
@@ -207,4 +204,4 @@ const FormComponent: FC = (): ReactElement => {
   );
 };
 
-export default FormComponent;
+export default ContactForm;
