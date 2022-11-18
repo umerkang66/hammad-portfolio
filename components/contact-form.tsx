@@ -14,7 +14,6 @@ interface FormValues {
 
 const ContactForm: FC = (): ReactElement => {
   const notificationContext = useContext(NotificationContext);
-  const [loading, setLoading] = useState(false);
 
   const onFormSubmit = async (
     values: FormValues,
@@ -23,7 +22,6 @@ const ContactForm: FC = (): ReactElement => {
     try {
       // reset the notification state.
       notificationContext.hideNotification();
-      setLoading(true);
 
       const res = await fetch('/api/send-message', {
         method: 'POST',
@@ -42,19 +40,15 @@ const ContactForm: FC = (): ReactElement => {
       if (!res.ok) throw new Error(body.message);
 
       formikHelpers.resetForm();
-      setLoading(false);
       notificationContext.showNotification({
         type: 'success',
         notificationText: 'Message is sent successfully',
       });
     } catch (err: any) {
-      setLoading(false);
-
       notificationContext.showNotification({
         type: 'error',
         notificationText: "Couldn't send your message",
       });
-      console.log(err.message);
     }
   };
 
@@ -90,76 +84,80 @@ const ContactForm: FC = (): ReactElement => {
               onSubmit={onFormSubmit}
               validationSchema={validationSchema}
             >
-              <Form className={styles.form}>
-                <Field
-                  className={`${styles.form__input} ${styles.form__input_name}`}
-                  type="text"
-                  name="name"
-                  id="name"
-                  placeholder="Your Name"
-                  autoComplete="off"
-                />
-                <div className={styles.error}>
-                  <ErrorMessage name="name" />
-                </div>
+              {formik => {
+                return (
+                  <Form className={styles.form}>
+                    <Field
+                      className={`${styles.form__input} ${styles.form__input_name}`}
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Your Name"
+                      autoComplete="off"
+                    />
+                    <div className={styles.error}>
+                      <ErrorMessage name="name" />
+                    </div>
 
-                <Field
-                  className={`${styles.form__input} ${styles.form__input_email}`}
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Your Email"
-                  autoComplete="off"
-                />
-                <div className={styles.error}>
-                  <ErrorMessage name="email" />
-                </div>
+                    <Field
+                      className={`${styles.form__input} ${styles.form__input_email}`}
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Your Email"
+                      autoComplete="off"
+                    />
+                    <div className={styles.error}>
+                      <ErrorMessage name="email" />
+                    </div>
 
-                <Field
-                  className={`${styles.form__input} ${styles.form__input_city}`}
-                  type="text"
-                  id="city"
-                  placeholder="Your City"
-                  name="city"
-                  autoComplete="off"
-                />
-                <div className={styles.error}>
-                  <ErrorMessage name="city" />
-                </div>
+                    <Field
+                      className={`${styles.form__input} ${styles.form__input_city}`}
+                      type="text"
+                      id="city"
+                      placeholder="Your City"
+                      name="city"
+                      autoComplete="off"
+                    />
+                    <div className={styles.error}>
+                      <ErrorMessage name="city" />
+                    </div>
 
-                <Field
-                  className={`${styles.form__input} ${styles.form__input_number}`}
-                  type="text"
-                  id="contact-number"
-                  placeholder="Your Contact Number"
-                  name="contactNumber"
-                  autoComplete="off"
-                />
-                <div className={styles.error}>
-                  <ErrorMessage name="contactNumber" />
-                </div>
+                    <Field
+                      className={`${styles.form__input} ${styles.form__input_number}`}
+                      type="text"
+                      id="contact-number"
+                      placeholder="Your Contact Number"
+                      name="contactNumber"
+                      autoComplete="off"
+                    />
+                    <div className={styles.error}>
+                      <ErrorMessage name="contactNumber" />
+                    </div>
 
-                <Field
-                  as="textarea"
-                  className={`${styles.form__input} ${styles.form__input_message}`}
-                  id="message"
-                  placeholder="Your Message"
-                  name="message"
-                />
-                <div className={styles.error}>
-                  <ErrorMessage name="message" />
-                </div>
+                    <Field
+                      as="textarea"
+                      className={`${styles.form__input} ${styles.form__input_message}`}
+                      id="message"
+                      placeholder="Your Message"
+                      name="message"
+                    />
+                    <div className={styles.error}>
+                      <ErrorMessage name="message" />
+                    </div>
 
-                <button
-                  className={`btn btn--primary ${styles.form__button}`}
-                  type="submit"
-                  disabled={loading}
-                >
-                  Send
-                  <div className={styles.form__button_text}></div>
-                  {loading ? <div className="loader" /> : null}
-                </button>
-              </Form>
+                    <button
+                      className={`btn btn--primary ${styles.form__button}`}
+                      type="submit"
+                      disabled={formik.isSubmitting}
+                    >
+                      Send
+                      <div className={styles.form__button_text}></div>
+                      {formik.isSubmitting ? <div className="loader" /> : null}
+                    </button>
+                  </Form>
+                );
+              }}
             </Formik>
           </div>
 
