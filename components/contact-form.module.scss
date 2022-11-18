@@ -106,6 +106,13 @@
       display: inline-block;
       margin-right: 1rem;
     }
+
+    &:disabled {
+      background-color: var(--color-primary-very-light);
+      border: 1px solid var(--color-primary-very-light);
+      box-shadow: none;
+      transform: translate(0);
+    }
   }
 }
 
