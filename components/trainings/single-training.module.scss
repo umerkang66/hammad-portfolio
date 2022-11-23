@@ -35,7 +35,7 @@
 
   &__main_desc {
     background-color: var(--color-primary);
-    padding: 2rem 2rem;
+    padding: 1rem 2rem;
     margin-top: 2rem;
 
     display: flex;
@@ -62,6 +62,13 @@
 
     &:hover {
       background-color: rgba($color: $color_white, $alpha: 0.3);
+    }
+
+    &__no_hover {
+      cursor: default;
+      &:hover {
+        background-color: transparent;
+      }
     }
   }
 

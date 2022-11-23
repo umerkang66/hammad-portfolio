@@ -72,7 +72,7 @@ const SingleTraining: FC<Props> = ({ training }) => {
                     {i + 1 + ': ' + desc}
                   </h2>
 
-                  {furtherDescriptions[i].length >= 1 && (
+                  {furtherDescriptions[i].length >= 1 ? (
                     <IoIosArrowDropdownCircle
                       onClick={() => {
                         setWhichBlockActive(prevState => ({
@@ -85,6 +85,11 @@ const SingleTraining: FC<Props> = ({ training }) => {
                         styles.single_training__main_desc_btn__active
                       }`}
                     />
+                  ) : (
+                    // just for styling, add the div with same styling with the button
+                    <div
+                      className={`${styles.single_training__main_desc_btn} ${styles.single_training__main_desc_btn__no_hover}`}
+                    ></div>
                   )}
                 </div>
 
