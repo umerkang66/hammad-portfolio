@@ -1,4 +1,5 @@
 import { FC, useEffect, useState } from 'react';
+import { IoIosArrowDropdownCircle } from 'react-icons/io';
 import { Training } from '../../common-types/training';
 import styles from './single-training.module.scss';
 
@@ -72,7 +73,7 @@ const SingleTraining: FC<Props> = ({ training }) => {
                   </h2>
 
                   {furtherDescriptions[i].length >= 1 && (
-                    <button
+                    <IoIosArrowDropdownCircle
                       onClick={() => {
                         setWhichBlockActive(prevState => ({
                           ...prevState,
@@ -83,9 +84,7 @@ const SingleTraining: FC<Props> = ({ training }) => {
                         whichBlockActive[i] &&
                         styles.single_training__main_desc_btn__active
                       }`}
-                    >
-                      <span>↓</span>
-                    </button>
+                    />
                   )}
                 </div>
 
