@@ -2,9 +2,10 @@
 @import '../../styles/mixins';
 
 .single_training {
-  padding: 2rem 0;
+  padding: 2rem;
   width: 60%;
   margin: auto;
+
   @include respond(tab-land) {
     width: 80%;
   }

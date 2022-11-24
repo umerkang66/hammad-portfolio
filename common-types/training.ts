@@ -1,4 +1,4 @@
-interface OneDescPoint {
+interface OneDescPoints {
   name: string;
   furtherDesc: string[];
 }
@@ -6,6 +6,6 @@ interface OneDescPoint {
 export interface Training {
   name: string;
   excerptDesc: string;
-  description: OneDescPoint[];
+  description: OneDescPoints[];
   slug: string;
 }
