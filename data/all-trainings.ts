@@ -6,6 +6,7 @@ const trainingsName = {
   amazonPrivateLabel: 'Amazon Private Label',
   dropshipping: 'Dropshipping',
   virtualAssistant: 'Virtual Assistant',
+  onlineArbitrage: 'Online Arbitrage',
 };
 
 export const allTrainings: Training[] = [
@@ -442,5 +443,38 @@ export const allTrainings: Training[] = [
       },
     ],
     slug: slugify(trainingsName.virtualAssistant.toLowerCase()),
+  },
+  {
+    name: trainingsName.onlineArbitrage,
+    excerptDesc:
+      'The main objective to learn this course is to find and buy a product online for a lower price and sell it at a higher rate. This model is easy, and you can do it from home. You can find popular products from any online retailer marketplaces and sell them on Amazon or Walmart.',
+    description: [
+      { name: 'Why Amazon', furtherDesc: [] },
+      { name: 'How to decide which marketplace is better', furtherDesc: [] },
+      {
+        name: 'Information needed for amazon account creation',
+        furtherDesc: [],
+      },
+      {
+        name: 'Find branded listing with good sales and ranking',
+        furtherDesc: [],
+      },
+      { name: 'Search products with tools and without tools', furtherDesc: [] },
+      { name: 'Importance of product ranking', furtherDesc: [] },
+      { name: 'Analysis the product using different tools', furtherDesc: [] },
+      { name: 'Sales Estimation', furtherDesc: [] },
+      { name: 'Profit Calculation', furtherDesc: [] },
+      { name: 'Listing Creation (FBA, FBM)', furtherDesc: [] },
+      { name: 'Brand Approval', furtherDesc: [] },
+      { name: 'Soft Approval', furtherDesc: [] },
+      { name: 'Ordering, shipment creation', furtherDesc: [] },
+      { name: 'Labeling and warehousing', furtherDesc: [] },
+      { name: 'Account Setup', furtherDesc: [] },
+      { name: 'Payment reports, business reports', furtherDesc: [] },
+      { name: 'Listing Issues', furtherDesc: [] },
+      { name: 'Pricing Issues', furtherDesc: [] },
+      { name: 'How to contact with amazon', furtherDesc: [] },
+    ],
+    slug: slugify(trainingsName.onlineArbitrage.toLowerCase()),
   },
 ];
