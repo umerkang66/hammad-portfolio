@@ -35,7 +35,7 @@ const SingleTraining: FC<Props> = ({ training }) => {
         <span style={{ fontWeight: 'bold' }}>Duration:</span> 2 months
       </p>
       <p className="paragraph">
-        <span style={{ fontWeight: 'bold' }}>Class:</span> Once a week
+        <span style={{ fontWeight: 'bold' }}>Class:</span> Once in a week
       </p>
 
       <h3 className="heading-tertiary u-margin-top-small">
