@@ -4,10 +4,11 @@ import Head from 'next/head';
 import Hero from '../components/home-page/hero';
 import FeaturedServices from '../components/home-page/featured-services';
 import HomePageTrainings from '../components/home-page/homepage-trainings';
+import Layout from '../components/layout/layout';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Home | Hammad</title>
         <meta
@@ -15,10 +16,12 @@ const Home: NextPage = () => {
           content="Amazon Account Manager || PPC Expert || PL Wholesale Dropshipping Expert || Amazon Evangelist Consultant and Trainer."
         />
       </Head>
-      <Hero />
-      <HomePageTrainings />
-      <FeaturedServices />
-    </div>
+      <Layout>
+        <Hero />
+        <HomePageTrainings />
+        <FeaturedServices />
+      </Layout>
+    </>
   );
 };
 

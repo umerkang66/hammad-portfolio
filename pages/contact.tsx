@@ -1,17 +1,19 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import { Fragment } from 'react';
 import ContactForm from '../components/contact-form';
+import Layout from '../components/layout/layout';
 
 const ContactPage: NextPage = () => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>Contact Me | Hammad</title>
         <meta name="description" content="Contact Me" />
       </Head>
-      <ContactForm />
-    </Fragment>
+      <Layout>
+        <ContactForm />
+      </Layout>
+    </>
   );
 };
 

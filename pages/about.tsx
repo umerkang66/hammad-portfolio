@@ -1,11 +1,11 @@
 import { NextPage } from 'next';
 import Head from 'next/head';
-import { Fragment } from 'react';
 import About from '../components/about';
+import Layout from '../components/layout/layout';
 
 const AboutPage: NextPage = () => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>About me | Hammad</title>
         <meta
@@ -14,8 +14,10 @@ const AboutPage: NextPage = () => {
           working in the E-Commerce/internet industry."
         />
       </Head>
-      <About />
-    </Fragment>
+      <Layout>
+        <About />
+      </Layout>
+    </>
   );
 };
 

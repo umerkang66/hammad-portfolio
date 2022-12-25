@@ -4,23 +4,25 @@ import {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import { Fragment } from 'react';
 
 import Head from 'next/head';
 import { allTrainings } from '../../data/all-trainings';
 import { Training } from '../../common-types/training';
 import SingleTraining from '../../components/trainings/single-training';
+import Layout from '../../components/layout/layout';
 
 const TrainingPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = props => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>{props.training.name} | Hammad</title>
       </Head>
-      <SingleTraining training={props.training} />
-    </Fragment>
+      <Layout>
+        <SingleTraining training={props.training} />
+      </Layout>
+    </>
   );
 };
 

@@ -1,0 +1,13 @@
+.services {
+  overflow-y: scroll;
+
+  height: calc(100vh - 95px);
+  background-color: var(--color-primary-very-light);
+  color: var(--color-background);
+  padding: 5rem;
+
+  h1 {
+    font-size: 34px;
+    margin-bottom: 2rem;
+  }
+}

@@ -4,22 +4,24 @@ import {
   InferGetStaticPropsType,
   NextPage,
 } from 'next';
-import { Fragment } from 'react';
 import { Service } from '../../common-types/service';
 import { allServices } from '../../data/all-services';
 import SingleService from '../../components/services/single-service';
 import Head from 'next/head';
+import Layout from '../../components/layout/layout';
 
 const ServicePage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = props => {
   return (
-    <Fragment>
+    <>
       <Head>
         <title>{props.service.name} | Hammad</title>
       </Head>
-      <SingleService service={props.service} />
-    </Fragment>
+      <Layout>
+        <SingleService service={props.service} />
+      </Layout>
+    </>
   );
 };
 

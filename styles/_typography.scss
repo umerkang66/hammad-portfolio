@@ -21,6 +21,10 @@
     border-bottom: 2px solid var(--color-background);
   }
 
+  &--no-border {
+    border-bottom: 'none';
+  }
+
   &__underline {
     display: inline-block;
     border-bottom: 2px solid var(--color-primary);
