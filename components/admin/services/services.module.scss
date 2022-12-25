@@ -6,6 +6,11 @@
   color: var(--color-background);
   padding: 5rem;
 
+  .content {
+    width: 75%;
+    margin: auto;
+  }
+
   h1 {
     font-size: 34px;
     margin-bottom: 2rem;

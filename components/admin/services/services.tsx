@@ -6,11 +6,13 @@ import styles from './services.module.scss';
 const Services: FC<{ services: Service[] }> = ({ services }) => {
   return (
     <div className={styles.services}>
-      <h1>Update Services</h1>
+      <div className={styles.content}>
+        <h1>Update Services</h1>
 
-      {services.map(service => {
-        return <ServiceCard key={service.slug} service={service} />;
-      })}
+        {services.map(service => {
+          return <ServiceCard key={service.slug} service={service} />;
+        })}
+      </div>
     </div>
   );
 };
