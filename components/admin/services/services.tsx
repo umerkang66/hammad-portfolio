@@ -58,7 +58,10 @@ const Services: FC<{ services: Service[] }> = ({ services }) => {
           <div />
 
           <div className={styles.actions}>
-            <button onClick={servicesSaveHandler} className="btn-admin">
+            <button
+              onClick={servicesSaveHandler}
+              className={'btn-admin' + ` ${styles.save}`}
+            >
               {loading ? <div className="loader" /> : 'Save'}
             </button>
 
