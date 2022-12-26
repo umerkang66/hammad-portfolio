@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import styles from './all-services.module.scss';
-import { allServices } from '../../data/all-services';
 import ServiceGrid from '../common/service-grid';
+import { Service } from '../../common-types/service';
 
-const AllServices: FC = () => {
+const AllServices: FC<{ services: Service[] }> = ({ services }) => {
   return (
     <div className={styles.all_services}>
       <div className="container">
@@ -11,7 +11,7 @@ const AllServices: FC = () => {
           All Services
         </h2>
 
-        <ServiceGrid services={allServices} background="light" />
+        <ServiceGrid services={services} background="light" />
       </div>
     </div>
   );
