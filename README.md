@@ -6,10 +6,10 @@ Open the code folder in terminal then RUN (You should have node js, and yarn ins
 yarn install
 ```
 
-After installing COPY `.env.local[template]` file to `.env.local`, then add all the environment variable values
+After installing COPY `.env.local.example` file to `.env.local`, then add all the environment variable values
 
 ```
-cp .env.local[template] .env.local
+cp .env.local.example .env.local
 ```
 
 After installing, and copying RUN, then open `http://localhost:3000`
