@@ -1,11 +1,20 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextApiHandler } from 'next';
+import { unstable_getServerSession } from 'next-auth';
 import fs from 'fs/promises';
 import path from 'path';
 
+import { authOptions } from '../auth/[...nextauth]';
+
 const FILE_PATH = path.join(process.cwd(), 'data', 'all-services.json');
 
-async function handler(req: NextApiRequest, res: NextApiResponse) {
+const handler: NextApiHandler = async (req, res) => {
   if (req.method === 'PATCH') {
+    const session = await unstable_getServerSession(req, res, authOptions);
+
+    if (!session) {
+      return res.status(401).send({ message: 'Unauthorized' });
+    }
+
     try {
       await fs.writeFile(FILE_PATH, JSON.stringify(req.body));
 
@@ -18,7 +27,7 @@ async function handler(req: NextApiRequest, res: NextApiResponse) {
     }
   }
 
-  throw new Error("Endpoint doesn't found");
-}
+  res.status(500).send({ message: "Endpoint doesn't exist" });
+};
 
 export default handler;

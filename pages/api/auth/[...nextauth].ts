@@ -1,7 +1,9 @@
 import NextAuth from 'next-auth/next';
+import { AuthOptions } from 'next-auth';
+
 import CredentialsProvider from 'next-auth/providers/credentials';
 
-export default NextAuth({
+export const authOptions: AuthOptions = {
   session: { strategy: 'jwt' },
   secret: process.env.ADMIN_SECRET,
   providers: [
@@ -29,4 +31,6 @@ export default NextAuth({
       },
     }),
   ],
-});
+};
+
+export default NextAuth(authOptions);
