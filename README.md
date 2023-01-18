@@ -12,7 +12,7 @@ After installing COPY `.env.local.example` file to `.env.local`, then add all th
 cp .env.local.example .env.local
 ```
 
-After installing, and copying RUN, then open `http://localhost:3000`
+After installing, and copying RUN `yarn dev`, then open `http://localhost:3000`
 
 ```
 yarn dev
