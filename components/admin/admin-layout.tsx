@@ -20,7 +20,7 @@ const Wrapped: FC<PropsWithChildren> = props => (
   <div className={styles.wrapped}>{props.children}</div>
 );
 
-const AdminLayout: FC<Props> = (props): ReactElement => {
+const AdminLayout: FC<Props> = props => {
   const session = useSession();
 
   let content: JSX.Element | null = null;
